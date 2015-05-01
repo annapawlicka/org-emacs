@@ -121,6 +121,21 @@
      (global-discover-mode 1)
    #+END_SRC
 
+** Disable beep
+
+   Disable the beep sound when trying to move the cursor beyond the
+   beginning or end of a document.
+
+    #+BEGIN_SRC emacs-lisp
+      (defun my-bell-function ()
+        (unless (memq this-command
+          '(isearch-abort abort-recursive-edit exit-minibuffer
+                keyboard-quit mwheel-scroll down up next-line previous-line
+                backward-char forward-char))
+              (ding)))
+       (setq ring-bell-function 'my-bell-function)
+    #+END_SRC
+
 * non-elpa and work arounds
 
   At the moment we don't have any workarounds. It looked like we might
