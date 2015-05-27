@@ -1,0 +1,74 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Wed May 27 17:09:27 2015
+;; Desktop file format version 206
+;; Emacs version 24.4.1
+
+;; Global section:
+(setq desktop-saved-frameset [frameset 1 (21861 60471 844552 0) (desktop . "206") "annapawlicka@neuromancer.local" nil nil ((((font-backend mac-ct ns) (fontsize . 0) (font . "-*-Menlo-normal-normal-normal-*-12-*-*-*-m-0-iso10646-1") (border-width . 0) (internal-border-width . 2) (vertical-scroll-bars) (foreground-color . "gray") (background-color . "black") (line-spacing) (left-fringe . 10) (right-fringe . 11) (menu-bar-lines . 1) (tool-bar-lines . 0) (title) (icon-type) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (alpha) (fullscreen . maximized) (horizontal-scroll-bars . t) (display-type . color) (background-mode . dark) (cursor-color . "#acfb5a") (environment) (border-color . "#222") (frameset--id . "811A-D0FF-6E35-E67F") (frameset--mini t . t) (modeline . t) (minibuffer . t) (unsplittable) (right-divider-width . 0) (bottom-divider-width . 0) (icon-name) (display . "neuromancer.local") (explicit-name) (tool-bar-position . top) (visibility . t) (height . 73) (width . 270) (left + -292) (top + -1048)) ((min-height . 4) (min-width . 20) (min-height-ignore . 2) (min-width-ignore . 10) (min-height-safe . 1) (min-width-safe . 4) (min-pixel-height . 56) (min-pixel-width . 140) (min-pixel-height-ignore . 28) (min-pixel-width-ignore . 70) (min-pixel-height-safe . 14) (min-pixel-width-safe . 28)) hc (pixel-width . 1916) (pixel-height . 1008) (total-width . 274) (total-height . 72) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 945) (pixel-height . 1008) (total-width . 135) (total-height . 72) (normal-height . 1.0) (normal-width . 0.49397590361445787) (buffer "project.clj" (selected) (hscroll . 0) (fringes 10 11 nil) (margins nil) (scroll-bars 0 0 nil nil) (vscroll . 0) (dedicated) (point . 468) (start . 1))) (leaf (last . t) (pixel-width . 971) (pixel-height . 1008) (total-width . 139) (total-height . 72) (normal-height . 1.0) (normal-width . 0.5060240963855421) (buffer "*cider-repl clj-ev3dev*" (selected . t) (hscroll . 0) (fringes 10 11 nil) (margins nil) (scroll-bars 0 0 t nil) (vscroll . 0) (dedicated) (point . 90) (start . 1)))))])
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring '("cider"))
+(setq regexp-search-ring nil)
+(setq register-alist nil)
+(setq file-name-history '("~/repos/org-emacs/org/config.org" "~/repos/clj-ev3dev/project.clj" "~/repos/clj-ev3dev/src/clj_ev3dev/led.clj" "~/repos/clj-ev3dev/src/clj_ev3dev/devices.clj"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 206
+  "/Users/annapawlicka/repos/clj-ev3dev/project.clj"
+  "project.clj"
+  'clojure-mode
+  '(window-number-mode helm-mode magit-auto-revert-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode subword-mode)
+  468
+  '(423 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/annapawlicka/repos/clj-ev3dev/src/clj_ev3dev/devices.clj"
+  "devices.clj"
+  'clojure-mode
+  '(window-number-mode helm-mode magit-auto-revert-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode subword-mode)
+  4607
+  '(917 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/annapawlicka/repos/org-emacs/org/config.org"
+  "config.org"
+  'org-mode
+  '(auto-fill-mode window-number-mode helm-mode magit-auto-revert-mode git-gutter+-mode projectile-mode yas-minor-mode company-mode)
+  6536
+  '(6536 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines . t)))
+
+(desktop-create-buffer 206
+  "/Users/annapawlicka/repos/clj-ev3dev/src/clj_ev3dev/led.clj"
+  "led.clj"
+  'clojure-mode
+  '(window-number-mode helm-mode magit-auto-revert-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode subword-mode)
+  2290
+  '(2290 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/annapawlicka/.emacs.d/elpa/org-20150525/org-loaddefs.el"
+  "org-loaddefs.el"
+  'emacs-lisp-mode
+  '(window-number-mode helm-mode magit-auto-revert-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode company-mode)
+  86727
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
