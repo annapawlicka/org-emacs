@@ -37,52 +37,26 @@
 
 ** Hippie Expand
 
-   I have a soft spot for hippie-expand. There might be better ways to
-   do this though and I'm happy to take advice from anyone with a
-   strong opinion. :-D
+   HippieExpand looks at the word before point and tries to expand it
+   in various ways including expanding from a fixed list, expanding
+   from matching text found in a buffer or expanding in ways defind by
+   your own functions.
 
    #+BEGIN_SRC emacs-lisp
      (global-set-key (kbd "M-RET") 'hippie-expand)
    #+END_SRC
 
-** upcase and downcase region
-
-   I like to be able to do this. I get lots of things that come in
-   SHOUTING or that need to SHOUT.
-
-   #+BEGIN_SRC emacs-lisp
-     (put 'downcase-region 'disabled nil)
-     (put 'upcase-region 'disabled nil)
-   #+END_SRC
-
-** Narrowing the region to what I want to look at
-
-   This isn't needed quite so much now that searches, regexp and
-   otherwise operate, sometimes annoyingly to an old timer like me, on
-   the region rather than the whole buffer window. I still like to
-   narrow down to what I'm interested in though and not every handy
-   tool in emacs is quite so region oriented.
-
-   #+BEGIN_SRC emacs-lisp
-     (put 'narrow-to-region 'disabled nil)
-   #+END_SRC
-
 ** diminish
 
-   As we add lots of useful minor-modes the mode line can get a bit
-   unwieldy. diminish-mode helps us with that. We'll set it up here
-   and use it in various places throughout the setup.
+   Stops minor modes from making a mess of the modeline.
 
    #+BEGIN_SRC emacs-lisp
      (maybe-install-and-require 'diminish)
    #+END_SRC
 
-** Tabs are Evil
+** Tabs
 
-   I mean, not like evil-mode is good for vi users who want to use
-   emacs, which is fine, and obviously not like a truly evil thing,
-   but you know, not what I want. Hey, I can use hyperbole in my
-   org-mode files if I want to.
+   Let's not used tabs for identation.
 
    #+BEGIN_SRC emacs-lisp
      (setq-default indent-tabs-mode nil)
@@ -90,16 +64,17 @@
 
 ** uniquify
 
+   When several buffers visit identically-named files, Emacs must give
+   the buffers distinct names. There are several different styles for
+   constructing such names. Post-forward puts the dricetory names in
+   forward order after the file name.
+
    #+BEGIN_SRC emacs-lisp
      (require 'uniquify)
      (setq uniquify-buffer-name-style 'post-forward)
    #+END_SRC
 
 ** Multiple Cursors
-
-   This is a replacement for the iedit that I used to have. Neale
-   Swinnerton was the one who showed this to me and it looked really
-   cool.
 
    #+BEGIN_SRC emacs-lisp
      (maybe-install-and-require 'multiple-cursors)
@@ -109,12 +84,9 @@
      (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
    #+END_SRC
 
-** Make emacs Discoverable
+** Discover
 
-   I started following [[https://twitter.com/melpa_emacs][@melpa_emacs]] at the end of 2013. From that I
-   discovered (see what I did there) discover.el, which has an
-   explanatory blog post [[http://www.masteringemacs.org/articles/2013/12/21/discoverel-discover-emacs-context-menus/][here]].
-
+   Allows to discover more of Emacs using context menus.
 
    #+BEGIN_SRC emacs-lisp
      (maybe-install-and-require 'discover)
@@ -136,25 +108,21 @@
        (setq ring-bell-function 'my-bell-function)
     #+END_SRC
 
-* non-elpa and work arounds
+** Better moving between windows
 
-  At the moment we don't have any workarounds. It looked like we might
-  need one for cider for a while but the marvelously helpful grand
-  master of the [[https://github.com/clojure-emacs][clojure Emacs repo]] [[http://twitter.com/bbatsov][Bozhidar Batsov]] has fixed it.
+   Rebind the default C-x o to M-o as it's such a common binding to
+   use.
 
-** non-elpa files
-
-   Unfortunately, we can't get everything we want from the package
-   archives or we might have files that we're working on locally that
-   we haven't released yet. We keep those in a non-elpa directory. We
-   need to add this to the load-path so that we can require the files
-   we have here.
+   #+BEGIN_SRC emacs-lisp
+     (global-set-key (kbd "M-o") 'other-window)
+   #+END_SRC
+* non-elpa
 
    #+BEGIN_SRC emacs-lisp
      (add-to-list 'load-path (concat user-emacs-directory "non-elpa/"))
    #+END_SRC
 
-* Macintosh Specific Setup
+* OSX Specific Setup
 
 ** # is broken on UK Macs
 
@@ -204,26 +172,7 @@
        (exec-path-from-shell-initialize))
    #+END_SRC
 
-** ns-win keys that I want to die
-
-   There are a number of Mac/Next things in ns-win.el that are
-   supposed to be there to make things friendlier for people who are
-   interface damaged by Mac OS X and similar. I'm damaged by other
-   things and hope to be moving back to a Linux flavour of some sort
-   again soon.
-
-*** ns-do-hide-emacs
-
-    This is the keybinding that is annoying me the most atm. I'd quite
-    like it to work for headlines in helm in most programming modes
-    instead.
-
-    #+BEGIN_SRC emacs-lisp
-      (global-unset-key (kbd "s-h"))
-    #+END_SRC
-
-* Make it Pretty
-
+* Pretty Emacs is pretty
 ** color themes
 
 *** custom-theme-directory
@@ -489,112 +438,16 @@
     ;;  (global-set-key (kbd "s-t") 'helm-projectile)
     #+END_SRC
 
-* Communication Modes
-
-** irc, currently with erc
-
-   Internet Relay Chat is a great way of talking to lots of
-   interesting people in what feels a bit like a pub.
-
-*** Tracking
-
-    We want to highlight pals and diminish fools, but leave out when
-    people leave and join. The list of all valid message types can be found at
-    https://www.alien.net.au/irc/irc2numerics.html
-
-    #+BEGIN_SRC emacs-lisp
-      (erc-track-mode t)
-      (setq erc-track-exclude-types '("JOIN" "NICK" "PART" "QUIT" "MODE"
-                                       "324" "329" "332" "333" "353" "477"))
-
-      ;; don't show any of this
-      (setq erc-hide-list '("JOIN" "PART" "QUIT" "NICK"))
-    #+END_SRC
-
-*** Scroll to Bottom
-
-    Typing happens at the bottom and we want as much history as
-    possible to be visible.
-
-    #+BEGIN_SRC emacs-lisp
-      (add-hook 'erc-mode-hook 'erc-add-scroll-to-bottom)
-    #+END_SRC
-
-*** Spell Checking
-
-    And spell checking is good.
-
-    #+BEGIN_SRC emacs-lisp
-      (erc-spelling-mode 1)
-    #+END_SRC
-
-    These are all of the channels I join by default. Some big data ones
-    like #cascalog and #hadoop. Some clojure ones such as
-    #liberator, #clojure, #clojurewerkz, #lndclj. Some devopsy ones
-    like #jclouds and #pallet. Some communities that do good
-    like #ukodi and ##cleanweb. And ones for Mastodon C like #kixi.
-
-    #+BEGIN_SRC emacs-lisp
-      (setq erc-autojoin-channels-alist '(("freenode.net" "#kixi" "#theodi" "#clojurescript" "#ldnclj")))
-    #+END_SRC
-
-*** Credentials
-
-    My credentials are in mellon.el of course. This is where I set
-    erc-user-full-name, erc-email-user-id, erc-nick and erc-password. I
-    also keep my erc-pals and erc-fools in here. Try to guess which
-    list you might be in. :-D
-
-*** Switch to irc
-
-    What we want to do is switch to irc if we've got something
-    running. If not, then start erc up.
-
-    #+BEGIN_SRC emacs-lisp
-      (defun switch-to-irc ()
-        (interactive)
-        (let ((buffers (and (fboundp 'erc-buffer-list)
-                            (erc-buffer-list))))
-          (if buffers
-              (switch-to-buffer (car buffers))
-            (erc :server "irc.freenode.net"))))
-    #+END_SRC
-
-*** Logging
-
-    Handy to save the irc logs so we have a way of finding interesting
-    things again after hearing about them on irc.
-
-    #+BEGIN_SRC emacs-lisp
-      (setq erc-log-channels-directory (concat user-emacs-directory "erc/logs/"))
-      (setq erc-save-buffer-on-part t)
-    #+END_SRC
-
 * Programming Modes
 ** prog-mode
-
-   prog-mode and the prog-mode-hook are at the basis of most of the
-   programming modes in emacs. If we want something set up for
-   everything we should do it here.
-
 *** Parentheses
-**** Show Them
-
-     We really want to see those parentheses.
+**** Show Parens
 
      #+BEGIN_SRC emacs-lisp
        (show-paren-mode +1)
      #+END_SRC
 
 **** paredit-mode
-
-     Should I move over to smartparens? Can anyone tell me what is so
-     much better about it?
-
-     paredit-mode is a strange one. When you first use it, you will
-     hate it. You'll hate the way it won't let you do the things
-     you *think* you want to do. Once you get used to it though you
-     wonder how you ever did any programming without it.
 
      #+BEGIN_SRC emacs-lisp
        (maybe-install-and-require 'paredit)
@@ -604,19 +457,12 @@
 
 *** rainbow-delimiters
 
-    Make those delimiters glow with wacky colors so we can see what is
-    going on.
-
     #+BEGIN_SRC emacs-lisp
       (maybe-install-and-require 'rainbow-delimiters)
       (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
     #+END_SRC
 
 *** rainbow mode
-
-    If we have a color literal it is really nice to have an idea of
-    what it is going to look like. This is *really* useful in things
-    like editing CSS files with hex color codes.
 
     #+BEGIN_SRC emacs-lisp
       (maybe-install-and-require 'rainbow-mode)
@@ -626,11 +472,6 @@
 
 *** highlight-symbol
 
-    I like to see all of the places I'm using the same symbol. This is
-    a great visual cue for those times where you've mistyped a variable
-    for function name. It isn't quite flymake, but it is handy. It is
-    good to see where something is used as well.
-
     #+BEGIN_SRC emacs-lisp
       (maybe-install-and-require 'highlight-symbol)
       (add-hook 'prog-mode-hook 'highlight-symbol-mode)
@@ -638,11 +479,8 @@
 
 *** yasnippet
 
-    I had some lovely things in skeleton mode ages ago to write out
-    boilerplate for C++ and to convert some awful, horrible 100
-    parameter PLSQL functions I had to call. yasnippets seems to be
-    the one that people are using now to do smaller things than what
-    I was doing with skeleton. This is probably a good thing.
+    Template system for Emacs. It allows you to type an abbreviation
+    and automatically expand it into function templates.
 
     #+BEGIN_SRC emacs-lisp
       (maybe-install-and-require 'yasnippet)
@@ -685,13 +523,7 @@
 
 ** lisp modes
 
-   emacs-lisp and clojure are the two that really go in here for now,
-   though in the future scheme and common lisp could be added.
-
 *** lisp hooks
-
-    These are the common lisp hooks we want shared across all lisp
-    modes.
 
     #+BEGIN_SRC emacs-lisp
             (setq lisp-hooks (lambda ()
@@ -707,20 +539,11 @@
 
 **** lisp-mode-hook
 
-     Let's add the lisp mode hook to the emacs-lisp-mode
-
      #+BEGIN_SRC emacs-lisp
        (add-hook 'emacs-lisp-mode-hook lisp-hooks)
      #+END_SRC
 
 **** Pop Up Help in Emacs Lisp
-
-     Thx again to [[http://twitter.com/krisajenkins][Kris Jenkins]] and his [[http://blog.jenkster.com/2013/12/popup-help-in-emacs-lisp.html][blog post]] I've got even yet
-     more help with emacs-lisp functions in a popup just like in ac
-     stuff in clojure modes. Thanks to [[http://twitter.com/sanityinc][Steve Purcell]] we have an
-     improved version that gets faces and vars in addition to
-     functions, so in some ways it is even a bit better than what is
-     available in cider/clojure-mode (from my understanding anyway).
 
      #+BEGIN_SRC emacs-lisp
        (require 'popup)
@@ -754,21 +577,6 @@
       #+END_SRC
 
 *** clojure
-
-    I do *love* coding in clojure. The tool chain has been evolving
-    quite a bit over the last few years.
-
-    Everything has gone from being built only with maven to maven
-    being just for core and everything else being done with [[http://leiningen.org/][Leiningen]].
-
-    On the emacs side we've gone from the swank and slime, to nrepl
-    and nrepl.el, to now we have nrepl and cider.el. Trying to move to
-    cider.el is what caused me to declare .emacs.d bankruptcy this
-    time and restructure everything.
-
-    Most of the clojure emacs goodness if available in the github
-    repo called [[https://github.com/clojure-emacs][clojure-emacs]].
-
 **** cider
 
 ***** install
@@ -780,28 +588,19 @@
         (maybe-install-and-require 'cider)
       #+END_SRC
 
-***** don't kill that repl
-
-      OMFG! I *hate* printing long or infinite seqs in the repl.
+***** don't print too much
 
       #+BEGIN_SRC emacs-lisp
         (setq cider-repl-print-length 100)
       #+END_SRC
 
-
 ***** clojure-mode-hook
-
-      We'll also want to get our lisp-hooks into our clojurey
-      goodness. It would be a shame to not have it here.
 
       #+BEGIN_SRC emacs-lisp
         (add-hook 'clojure-mode-hook lisp-hooks)
       #+END_SRC
 
 ***** cider-mode-hooks
-
-      There are more things that we'll want that are specific to cider
-      mode and the cider interaction buffer.
 
       #+BEGIN_SRC emacs-lisp
         (add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
@@ -810,25 +609,13 @@
 
 ***** Save cider history
 
-      We also want to save the history of our interactions. There might
-      be gold there.
-
       #+BEGIN_SRC emacs-lisp
         (setq cider-history-file (concat user-emacs-directory "cider-history"))
       #+END_SRC
 
-***** subword-mode
-
-      I also want to be able to navigate to the "-" characters in words.
-
-      #+BEGIN_SRC emacs-lisp
-        (add-hook 'cider-mode-hook 'subword-mode)
-      #+END_SRC
-
 ***** Pop up Documentation
 
-      Now that we have popups, let's make the docs go in a popup
-      rather than another window.
+      Docs go in a popup rather than another window.
 
       #+BEGIN_SRC emacs-lisp
         (define-key cider-mode-map (kbd "C-c C-d") 'ac-nrepl-popup-doc)
@@ -838,17 +625,13 @@
 
      Pretty alignment of let, when-let, if-let, binding, loop,
      with-open, literal hashes {}, defroute, cond, and condp
-     (except :>> subforms). This is partly to keep things formatted
-     the same way as Neale Swinnerton.
+     (except :>> subforms).
 
      #+BEGIN_SRC emacs-lisp
        (maybe-install-and-require 'align-cljlet)
      #+END_SRC
 
 **** helm and clojure
-
-     Kris Jenkins has a great helm-clojure-headlines that I'd like to
-     bind to s-h when in clojure-mode.
 
      #+BEGIN_SRC emacs-lisp
        (defun helm-clojure-headlines ()
@@ -864,12 +647,6 @@
 
 **** Clojure Cheat Sheet
 
-     It was this helm addon from Kris Jenkins that made me start to
-     look at helm. And having the clojure cheat sheet to hand is
-     useful.
-
-     I like binding cheatsheets to s-f9.
-
      #+BEGIN_SRC emacs-lisp
        (maybe-install-and-require 'clojure-cheatsheet)
        (add-hook 'clojure-mode-hook
@@ -877,9 +654,6 @@
      #+END_SRC
 
 **** sw1nn-cider-perspective or Engineering
-
-     I really like what Neale has done to set up a quick cider
-     perspective. I just don't like what he called it. ;-)
 
      #+BEGIN_SRC emacs-lisp
        (defun sw1nn-nrepl-current-server-buffer ()
@@ -898,27 +672,12 @@
          (pop-to-buffer (cider-find-or-create-repl-buffer)))
      #+END_SRC
 
-** python
-
-*** GNU Emacs IPython Notebook
-
-    The [[http://ipython.org/][IPython Notebook]] is *almost* as cool as org-mode literate
-    programming. There is an Emacs mode you can use with it.
-
-    #+BEGIN_SRC emacs-lisp
-      (maybe-install-and-require 'ein)
-    #+END_SRC
-
 ** javascript
-
-   According to [[http://twitter.com/sw1nn][Neale Swinnerton]] js2-mode is the way to go.
 
    #+BEGIN_SRC emacs-lisp
      (maybe-install-and-require 'js2-mode)
      (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
    #+END_SRC
-
-   And we can hook it in to run node.js shell scripts as well.
 
    #+BEGIN_SRC emacs-lisp
      (add-to-list 'interpreter-mode-alist '("node" . js2-mode))
@@ -1366,9 +1125,6 @@
            (add-hook 'html-mode-hook (lambda () (tagedit-mode 1)))))
     #+END_SRC
 
-    I quite like the sound of the experimental editing stuff. Let's
-    put it in and see if it helps or destroys our code.
-
     #+BEGIN_SRC emacs-lisp
       (tagedit-add-experimental-features)
     #+END_SRC
@@ -1379,15 +1135,11 @@
 
 **** paredit
 
-     I *always* want my parens to match (except in text modes).
-
      #+BEGIN_SRC emacs-lisp
        (add-hook 'css-mode-hook 'paredit-mode)
      #+END_SRC
 
 **** rainbow mode
-
-     And I want to see the colours I'm using.
 
      #+BEGIN_SRC emacs-lisp
        (add-hook 'css-mode-hook 'rainbow-mode)
@@ -1395,17 +1147,11 @@
 
 **** eldoc
 
-     And who doesn't want eldoc tips when they are editing things.
-
      #+BEGIN_SRC emacs-lisp
        (maybe-install-and-require 'css-eldoc)
      #+END_SRC
 
 **** helm support
-
-     And to be able to navigate around our selectors using helm. And
-     then we want to make it a headline key just like in our other
-     modes.
 
      #+BEGIN_SRC emacs-lisp
        (maybe-install-and-require 'helm-css-scss)
@@ -1414,9 +1160,6 @@
      #+END_SRC
 
 ** markdown
-
-   I love org-mode, but lots of other systems use markdown, github
-   wiki pages being a very good example.
 
    #+BEGIN_SRC emacs-lisp
      (maybe-install-and-require 'markdown-mode)
@@ -1463,138 +1206,9 @@
       (add-hook 'markdown-mode-hook
                 (lambda () (local-set-key (kbd "s-h") 'helm-markdown-headlines)))
     #+END_SRC
-* Multimedia
-
-** emms to play music
-
-   I've used emms before. I like the way you just need an underlying
-   media player and emacs is just a thin shell over that, with some
-   files to help with play lists. We're using mpg321 from homebrew on
-   a mac to play the files.
-
-   #+BEGIN_SRC emacs-lisp
-     (maybe-install-and-require 'emms)
-     (require 'emms-setup)
-     (emms-standard)
-     (emms-default-players)
-     (setq emms-source-file-default-directory "/Users/bld/Music/")
-   #+END_SRC
-
-*** emms keybindings
-
-    f7-f9 are the previous, play/pause and next keys. It is quite
-    handy having them bound to do that for emms.
-
-    And a control-meta to start everything off.
-
-    #+BEGIN_SRC emacs-lisp
-      (global-set-key (kbd "C-M-<f8>") 'emms-play-playlist)
-      (global-set-key (kbd "<f8>") 'emms-pause)
-      (global-set-key (kbd "<f9>") 'emms-next)
-      (global-set-key (kbd "<f7>") 'emms-previous)
-      (global-set-key (kbd "s-<f8>") 'emms-stop)
-    #+END_SRC
-
-*** Turn off emms-mode-line
-
-    There really is enough in that modeline already. We don't need to
-    add more.
-
-    #+BEGIN_SRC emacs-lisp
-      (require 'emms-mode-line)
-      (emms-mode-line 0)
-    #+END_SRC
-
-* Local Config
-
-** custom.el
-
-   custom.el is great for configuring things through that "gui" in
-   emacs, but it is a real pain when it drops junk in your [[../init.el][init.el]] and
-   messes up your pretty config and git history and is stuff that you
-   don't want to leak out on to github. You can change the location of
-   this file though and I like to do this.
-
-   #+BEGIN_SRC emacs-lisp
-     (setq custom-file "~/.emacs.d/local/custom.el")
-     (load-if-exists custom-file)
-   #+END_SRC
-
-* Utilities and General Keybindings
-
-** join-line
-
-   A quick way of getting lines back together.
-
-   #+BEGIN_SRC emacs-lisp
-     (global-set-key (kbd "s-<return>") 'join-line)
-   #+END_SRC
-
 * Finishing
-
-** General Cleanup
-
-   This is a bit pathetic, but sometimes things get set by various
-   modes above and to be honest, I'm just too lazy at the moment to
-   figure out which ones. So, we'll do some final bits of clean up
-   down here and maybe some day, I'll get around to it.
-
-*** Random Default on Minor Modes
-
-    With newer version of emacs new minor modes get turned on by
-    default and clutter up my mode line. I'd like to turn them off.
-
-**** auto-revert
-
-     OK. I get it. auto-revert mode is on.
-
-     #+BEGIN_SRC emacs-lisp
-       (diminish 'auto-revert-mode)
-     #+END_SRC
-
-** passwords and encrypted things
-
-   It is good to store your passwords and things in an encrypted
-   file. I call mine mellon, because you can only read it if you are
-   my friend and have the passphrase.
-
-   This does mean that every time you use it you have to give the
-   passphrase, but it does mean that you can keep all your passwords
-   for things like erc and stuff in a file reasonably safely (though
-   it will be in memory when emacs is running, so it isn't completely
-   secure).
+** auto-revert
 
    #+BEGIN_SRC emacs-lisp
-     (load-if-exists (concat user-emacs-directory "local/mellon.el.gpg"))
-   #+END_SRC
-
-** emacs-server
-
-   Emacs startup time isn't nearly as much of a problem as it used to
-   be. I'm also pretty patient as I've been working with JVM startup
-   times over the years.
-
-   However, it is still nice to be able to attach to a running Emacs
-   process when we want to. To that end, let's start up an
-   emacs-server.
-
-   #+BEGIN_SRC emacs-lisp
-     (server-start)
-   #+END_SRC
-
-** Finis
-
-   I should really come up with better exhortations than this. The
-   stuff that Sam Aaron has in emacs-live I actually find quite
-   inspirational. cider.el has similar, though more specifically
-   clojurian things to say that I quite like as well.
-
-   However, I've always expected that any sufficiently advanced lisp
-   system has probably gained sentience. I think Emacs probably
-   qualifies for that.
-
-   Therefore, let's sign off as so...
-
-   #+BEGIN_SRC emacs-lisp
-     (message "Cogito ergo sum.")
+     (diminish 'auto-revert-mode)
    #+END_SRC

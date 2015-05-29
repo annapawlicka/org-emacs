@@ -14,11 +14,6 @@
 
 (global-set-key (kbd "M-RET") 'hippie-expand)
 
-(put 'downcase-region 'disabled nil)
-(put 'upcase-region 'disabled nil)
-
-(put 'narrow-to-region 'disabled nil)
-
 (maybe-install-and-require 'diminish)
 
 (setq-default indent-tabs-mode nil)
@@ -35,6 +30,16 @@
 (maybe-install-and-require 'discover)
 (global-discover-mode 1)
 
+(defun my-bell-function ()
+  (unless (memq this-command
+    '(isearch-abort abort-recursive-edit exit-minibuffer
+          keyboard-quit mwheel-scroll down up next-line previous-line
+          backward-char forward-char))
+        (ding)))
+ (setq ring-bell-function 'my-bell-function)
+
+(global-set-key (kbd "M-o") 'other-window)
+
 (add-to-list 'load-path (concat user-emacs-directory "non-elpa/"))
 
 (global-set-key (kbd "M-3") '(lambda () (interactive) (insert "#")))
@@ -48,8 +53,6 @@
 (maybe-install-and-require 'exec-path-from-shell)
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
-
-(global-unset-key (kbd "s-h"))
 
 (setq custom-theme-directory (concat user-emacs-directory "themes"))
 
@@ -131,30 +134,6 @@
 ;;  (maybe-install-and-require 'helm-projectile)
 ;;  (global-set-key (kbd "s-t") 'helm-projectile)
 
-(erc-track-mode t)
-(setq erc-track-exclude-types '("JOIN" "NICK" "PART" "QUIT" "MODE"
-                                 "324" "329" "332" "333" "353" "477"))
-
-;; don't show any of this
-(setq erc-hide-list '("JOIN" "PART" "QUIT" "NICK"))
-
-(add-hook 'erc-mode-hook 'erc-add-scroll-to-bottom)
-
-(erc-spelling-mode 1)
-
-(setq erc-autojoin-channels-alist '(("freenode.net" "#kixi" "#theodi" "#clojurescript" "#ldnclj")))
-
-(defun switch-to-irc ()
-  (interactive)
-  (let ((buffers (and (fboundp 'erc-buffer-list)
-                      (erc-buffer-list))))
-    (if buffers
-        (switch-to-buffer (car buffers))
-      (erc :server "irc.freenode.net"))))
-
-(setq erc-log-channels-directory (concat user-emacs-directory "erc/logs/"))
-(setq erc-save-buffer-on-part t)
-
 (show-paren-mode +1)
 
 (maybe-install-and-require 'paredit)
@@ -224,8 +203,6 @@
 
 (setq cider-history-file (concat user-emacs-directory "cider-history"))
 
-(add-hook 'cider-mode-hook 'subword-mode)
-
 (define-key cider-mode-map (kbd "C-c C-d") 'ac-nrepl-popup-doc)
 
 (maybe-install-and-require 'align-cljlet)
@@ -258,8 +235,6 @@
   (switch-to-buffer (sw1nn-nrepl-current-server-buffer))
   (windmove-up)
   (pop-to-buffer (cider-find-or-create-repl-buffer)))
-
-(maybe-install-and-require 'ein)
 
 (maybe-install-and-require 'js2-mode)
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
@@ -476,30 +451,4 @@
 (add-hook 'markdown-mode-hook
           (lambda () (local-set-key (kbd "s-h") 'helm-markdown-headlines)))
 
-(maybe-install-and-require 'emms)
-(require 'emms-setup)
-(emms-standard)
-(emms-default-players)
-(setq emms-source-file-default-directory "/Users/bld/Music/")
-
-(global-set-key (kbd "C-M-<f8>") 'emms-play-playlist)
-(global-set-key (kbd "<f8>") 'emms-pause)
-(global-set-key (kbd "<f9>") 'emms-next)
-(global-set-key (kbd "<f7>") 'emms-previous)
-(global-set-key (kbd "s-<f8>") 'emms-stop)
-
-(require 'emms-mode-line)
-(emms-mode-line 0)
-
-(setq custom-file "~/.emacs.d/local/custom.el")
-(load-if-exists custom-file)
-
-(global-set-key (kbd "s-<return>") 'join-line)
-
 (diminish 'auto-revert-mode)
-
-(load-if-exists (concat user-emacs-directory "local/mellon.el.gpg"))
-
-(server-start)
-
-(message "Cogito ergo sum.")

@@ -9,3 +9,9 @@ pom.xml.asc
 .lein-repl-history
 .lein-plugins/
 .lein-failures
+ac-comhist.dat
+/tmp/
+/auto-save-list/
+/var/
+cider-history
+projectile-bookmarks.eld
