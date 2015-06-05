@@ -205,6 +205,8 @@
 
 (define-key cider-mode-map (kbd "C-c C-d") 'ac-nrepl-popup-doc)
 
+(setq cider-show-error-buffer nil)
+
 (maybe-install-and-require 'align-cljlet)
 
 (defun helm-clojure-headlines ()

@@ -116,6 +116,11 @@
    #+BEGIN_SRC emacs-lisp
      (global-set-key (kbd "M-o") 'other-window)
    #+END_SRC
+** Save Emacs sessions
+
+   #+BEGIN_SRC emacs-lisp
+     (desktop-save-mode 1)
+   #+END_SRC
 * non-elpa
 
    #+BEGIN_SRC emacs-lisp
