@@ -121,6 +121,19 @@
    #+BEGIN_SRC emacs-lisp
      (desktop-save-mode 1)
    #+END_SRC
+** Pivotal hook
+
+   #+BEGIN_SRC emacs-lisp
+    (defun git-commit-template ()
+      (let ((branch (magit-get-current-branch)))
+        (when (setq pivotal-id (cadr (s-match "\\([0-9]+\\)-" branch)))
+          (newline 2)
+          (insert (format "Story: https://www.pivotaltracker.com/story/show/%s"
+                          pivotal-id))
+          (goto-char (point-min))
+          (insert (format "[#%s] " pivotal-id)))))
+     (add-hook 'git-commit-mode-hook #'git-commit-template)
+   #+END_SRC
 * non-elpa
 
    #+BEGIN_SRC emacs-lisp
