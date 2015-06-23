@@ -1,11 +1,9 @@
 ;;; smartscan-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads (global-smartscan-mode smartscan-mode smartscan-symbol-replace
-;;;;;;  smartscan-symbol-go-backward smartscan-symbol-go-forward)
-;;;;;;  "smartscan" "smartscan.el" (21189 43005 0 0))
+;;;### (autoloads nil "smartscan" "smartscan.el" (21892 9757 0 0))
 ;;; Generated autoloads from smartscan.el
 
 (autoload 'smartscan-symbol-go-forward "smartscan" "\
@@ -66,16 +64,9 @@ See `smartscan-mode' for more information on Smartscan mode.
 
 ;;;***
 
-;;;### (autoloads nil nil ("smartscan-pkg.el") (21189 43005 517923
-;;;;;;  0))
-
-;;;***
-
-(provide 'smartscan-autoloads)
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; smartscan-autoloads.el ends here

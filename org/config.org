@@ -132,8 +132,8 @@
                           pivotal-id))
           (goto-char (point-min))
           (insert (format "[#%s] " pivotal-id)))))
-     (add-hook 'git-commit-mode-hook #'git-commit-template)
-   #+END_SRC
+    (add-hook 'git-commit-mode-hook #'git-commit-template)
+  #+END_SRC
 * non-elpa
 
    #+BEGIN_SRC emacs-lisp

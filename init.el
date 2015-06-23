@@ -6,8 +6,8 @@
 ;;
 ;; http://orgmode.org/worg/org-contrib/babel/intro.html
 (require 'package)
-(setq package-archives '(;; ("gnu" . "http://elpa.gnu.org/packages/")
-			 ;; ("marmalade" . "http://marmalade-repo.org/packages/")
+(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+			;; ("marmalade" . "http://marmalade-repo.org/packages/")
                          ("org" . "http://orgmode.org/elpa/")
                          ("melpa" . "http://melpa.milkbox.net/packages/")
                         ;; ("melpa-stable" . "http://melpa-stable.milkbox.net/packages/")
@@ -25,6 +25,9 @@
   (when (not (package-installed-p p))
     (package-install p))
   (require p))
+
+(setq desktop-restore-forces-onscreen nil)
+(setq magit-last-seen-setup-instructions "1.4.0")
 
 ;; org-mode always needs to be installed in an emacs where it isn't loaded.
 (require 'org)

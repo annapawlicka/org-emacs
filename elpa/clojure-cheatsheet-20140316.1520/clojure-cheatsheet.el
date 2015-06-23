@@ -4,10 +4,10 @@
 ;; Author: Kris Jenkins <krisajenkins@gmail.com>
 ;; Maintainer: Kris Jenkins <krisajenkins@gmail.com>
 ;; Keywords: clojure nrepl cheatsheet helm
+;; Package-Version: 20140316.1520
 ;; URL: https://github.com/krisajenkins/clojure-cheatsheet
 ;; Created: 7th August 2013
-;; Version: 20140316.1520
-;; X-Original-Version: 0.2.2
+;; Version: 0.2.2
 ;; Package-Requires: ((helm "1.5.3") (cider "0.1.8"))
 
 ;;; Commentary:

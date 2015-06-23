@@ -2,8 +2,8 @@
 ;; Copyright 2012-2014 Anthony Grimes
 ;; Author: Anthony Grimes
 ;; URL: https://github.com/Raynes/refheap.el
-;; Version: 20140902.1402
-;; X-Original-Version: 0.0.7
+;; Package-Version: 20140902.1402
+;; Version: 0.0.7
 ;; Package-Requires: ((json "1.2"))
 
 (require 'json)

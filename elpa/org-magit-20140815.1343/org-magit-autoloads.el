@@ -3,7 +3,7 @@
 ;;; Code:
 (add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil "org-magit" "org-magit.el" (21620 22464 0 0))
+;;;### (autoloads nil "org-magit" "org-magit.el" (21895 65472 0 0))
 ;;; Generated autoloads from org-magit.el
 
 (autoload 'org-magit-open "org-magit" "\

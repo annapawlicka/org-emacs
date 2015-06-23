@@ -3,8 +3,8 @@
 ;; Copyrigth (C) 2011  Glen Stampoultzis
 
 ;; Author: Glen Stampoultzis <gstamp(at)gmail.com>
-;; Version: 20131016.2356
-;; X-Original-Version: 0.3
+;; Version: 0.3
+;; Package-Version: 20131016.2356
 ;; Package-Requires: ((clojure-mode "1.11.5"))
 ;; Keywords; clojure, align, let
 ;; URL: https://github.com/gstamp/align-cljlet

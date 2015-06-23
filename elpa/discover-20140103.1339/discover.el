@@ -4,8 +4,8 @@
 
 ;; Author: Mickey Petersen <mickey@fyeah.org>
 ;; Keywords:
-;; Version: 20140103.1339
-;; X-Original-Version: 0.2
+;; Package-Version: 20140103.1339
+;; Version: 0.2
 ;; Package-Requires: ((makey "0.3"))
 
 ;; This program is free software; you can redistribute it and/or modify

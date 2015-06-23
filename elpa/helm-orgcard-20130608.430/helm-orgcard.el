@@ -5,8 +5,8 @@
 ;; Maintainer: Yuhei Maeda
 ;; Copyright (C) 2013 Yuhei Maeda all rights reserved.
 ;; Created: :2013-06-05
-;; Version: 20130608.430
-;; X-Original-Version: 0.1
+;; Version: 0.1
+;; Package-Version: 20130608.430
 ;; Keywords: convenience, helm, org
 ;; URL: https://github.com/emacs-helm/helm-orgcard
 ;; Package-Requires: ((helm "1.5.2"))

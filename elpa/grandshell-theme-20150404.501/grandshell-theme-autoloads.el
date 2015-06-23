@@ -3,16 +3,16 @@
 ;;; Code:
 (add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil "grandshell-theme" "grandshell-theme.el" (21855
-;;;;;;  43547 0 0))
+;;;### (autoloads nil "grandshell-theme" "grandshell-theme.el" (21892
+;;;;;;  5908 0 0))
 ;;; Generated autoloads from grandshell-theme.el
 
 (when (and (boundp 'custom-theme-load-path) load-file-name) (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
 
 ;;;***
 
-;;;### (autoloads nil nil ("grandshell-theme-pkg.el") (21855 43547
-;;;;;;  863238 0))
+;;;### (autoloads nil nil ("grandshell-theme-pkg.el") (21892 5908
+;;;;;;  359950 0))
 
 ;;;***
 

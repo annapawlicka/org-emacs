@@ -3,8 +3,8 @@
 ;; Copyright (C) 2008, 2013 Nikolaj Schumacher
 ;;
 ;; Author: Nikolaj Schumacher <bugs * nschum de>
-;; Version: 20140620.1409
-;; X-Original-Version: 1.0.2
+;; Version: 1.0.2
+;; Package-Version: 20140620.1409
 ;; Keywords: lisp
 ;; URL: http://nschum.de/src/emacs/fringe-helper/
 ;; Compatibility: GNU Emacs 22.x, GNU Emacs 23.x, GNU Emacs 24.x

@@ -40,6 +40,18 @@
 
 (global-set-key (kbd "M-o") 'other-window)
 
+(desktop-save-mode 1)
+
+(defun git-commit-template ()
+  (let ((branch (magit-get-current-branch)))
+    (when (setq pivotal-id (cadr (s-match "\\([0-9]+\\)-" branch)))
+      (newline 2)
+      (insert (format "Story: https://www.pivotaltracker.com/story/show/%s"
+                      pivotal-id))
+      (goto-char (point-min))
+      (insert (format "[#%s] " pivotal-id)))))
+(add-hook 'git-commit-mode-hook #'git-commit-template)
+
 (add-to-list 'load-path (concat user-emacs-directory "non-elpa/"))
 
 (global-set-key (kbd "M-3") '(lambda () (interactive) (insert "#")))

@@ -1,10 +1,9 @@
 ;;; makey-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads (makey-initialize-key-groups) "makey" "makey.el"
-;;;;;;  (21188 961 0 0))
+;;;### (autoloads nil "makey" "makey.el" (21892 5902 0 0))
 ;;; Generated autoloads from makey.el
 
 (autoload 'makey-initialize-key-groups "makey" "\
@@ -14,15 +13,9 @@ Initializes KEY-GROUP and creates all the relevant interactive commands.
 
 ;;;***
 
-;;;### (autoloads nil nil ("makey-pkg.el") (21188 961 656227 0))
-
-;;;***
-
-(provide 'makey-autoloads)
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; makey-autoloads.el ends here

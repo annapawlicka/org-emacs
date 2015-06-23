@@ -5,8 +5,8 @@
 
 ;; Author: Mickey Petersen <mickey@masteringemacs.org>
 ;; Keywords:
-;; Version: 20131231.630
-;; X-Original-Version: 0.3
+;; Package-Version: 20131231.630
+;; Version: 0.3
 ;; Package-Requires: ((cl-lib "0.2"))
 
 ;; This program is free software; you can redistribute it and/or modify

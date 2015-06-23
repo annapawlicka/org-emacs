@@ -2,8 +2,8 @@
 
 ;; Copyright (C) 2013 by Shingo Fukuyama
 
-;; Version: 20140626.1725
-;; X-Original-Version: 1.3
+;; Version: 1.3
+;; Package-Version: 20140626.1725
 ;; Author: Shingo Fukuyama - http://fukuyama.co
 ;; URL: https://github.com/ShingoFukuyama/helm-css-scss
 ;; Created: Oct 18 2013

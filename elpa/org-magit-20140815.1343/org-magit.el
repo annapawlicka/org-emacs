@@ -4,8 +4,8 @@
 
 ;; Author: Yann Hodique <yann.hodique@gmail.com>
 ;; Keywords: git, magit, outlines
-;; Version: 20140815.1343
-;; X-Original-Version: 0.2.2
+;; Package-Version: 20140815.1343
+;; Version: 0.2.2
 ;; Package-Requires: ((magit "1.2.0") (org "6.01"))
 
 ;; This file is free software; you can redistribute it and/or modify
