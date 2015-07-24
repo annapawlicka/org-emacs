@@ -10,6 +10,18 @@
         (message (format "Loading file: %s" file)))
     (message (format "No %s file. So not loading one." file))))
 
+(unless window-system
+  (require 'mouse)
+  (xterm-mouse-mode t)
+  (global-set-key [mouse-4] '(lambda ()
+                             (interactive)
+                             (scroll-down 1)))
+  (global-set-key [mouse-5] '(lambda ()
+                             (interactive)
+                             (scroll-up 1)))
+  (defun track-mouse (e))
+  (setq mouse-sel-mode t))
+
 (add-hook 'after-init-hook 'global-company-mode)
 
 (global-set-key (kbd "M-RET") 'hippie-expand)

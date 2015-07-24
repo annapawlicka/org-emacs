@@ -2,21 +2,439 @@
 ;; --------------------------------------------------------------------------
 ;; Desktop File for Emacs
 ;; --------------------------------------------------------------------------
-;; Created Fri Jul 17 13:33:14 2015
+;; Created Fri Jul 24 14:56:42 2015
 ;; Desktop file format version 206
 ;; Emacs version 24.4.1
 
 ;; Global section:
-(setq desktop-saved-frameset [frameset 1 (21928 62986 703592 0) (desktop . "206") "annapawlicka@Firefly.local" nil nil ((((font-backend mac-ct ns) (fontsize . 0) (font . "-*-Menlo-normal-normal-normal-*-12-*-*-*-m-0-iso10646-1") (border-width . 0) (internal-border-width . 2) (vertical-scroll-bars) (foreground-color . "gray") (background-color . "black") (line-spacing) (left-fringe . 10) (right-fringe . 11) (menu-bar-lines . 1) (tool-bar-lines . 0) (title) (icon-type) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (alpha) (fullscreen) (display . "Firefly.local") (display-type . color) (background-mode . dark) (cursor-color . "#acfb5a") (border-color . "#222") (visibility) (horizontal-scroll-bars . t) (environment) (frameset--id . "811A-D0FF-6E35-E67F") (frameset--mini t) (modeline . t) (minibuffer . t) (unsplittable) (right-divider-width . 0) (bottom-divider-width . 0) (icon-name) (explicit-name) (tool-bar-position . top) (height . 35) (width . 80) (left + -292) (top + -1048)) ((min-height . 8) (min-width . 10) (min-height-ignore . 4) (min-width-ignore . 5) (min-height-safe . 2) (min-width-safe . 2) (min-pixel-height . 112) (min-pixel-width . 70) (min-pixel-height-ignore . 56) (min-pixel-width-ignore . 35) (min-pixel-height-safe . 28) (min-pixel-width-safe . 14)) vc (pixel-width . 581) (pixel-height . 476) (total-width . 83) (total-height . 34) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 581) (pixel-height . 238) (total-width . 83) (total-height . 17) (normal-height . 0.5) (normal-width . 1.0) (buffer "*scratch*" (selected) (hscroll . 0) (fringes 10 11 nil) (margins nil) (scroll-bars 0 0 nil nil) (vscroll . 0) (dedicated) (point . 192) (start . 1))) (leaf (last . t) (pixel-width . 581) (pixel-height . 238) (total-width . 83) (total-height . 17) (normal-height . 0.5) (normal-width . 1.0) (buffer "*Warnings*" (selected) (hscroll . 0) (fringes 10 11 nil) (margins nil) (scroll-bars 0 0 t nil) (vscroll . 0) (dedicated) (point . 363) (start . 1)))) (((font-backend mac-ct ns) (fontsize . 0) (font . "-*-Menlo-normal-normal-normal-*-12-*-*-*-m-0-iso10646-1") (border-width . 0) (internal-border-width . 2) (vertical-scroll-bars) (foreground-color . "gray") (background-color . "black") (line-spacing) (left-fringe . 10) (right-fringe . 11) (menu-bar-lines . 1) (tool-bar-lines . 0) (title) (icon-type) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (alpha) (fullscreen . maximized) (horizontal-scroll-bars . t) (display-type . color) (background-mode . dark) (cursor-color . "#acfb5a") (environment) (border-color . "#222") (frameset--id . "3DCC-C051-BE43-12AD") (frameset--mini t . t) (modeline . t) (minibuffer . t) (unsplittable) (right-divider-width . 0) (bottom-divider-width . 0) (icon-name) (display . "Firefly.local") (explicit-name) (tool-bar-position . top) (visibility . t) (height . 70) (width . 270) (left . 0) (top . 31)) ((min-height . 4) (min-width . 20) (min-height-ignore . 3) (min-width-ignore . 10) (min-height-safe . 1) (min-width-safe . 4) (min-pixel-height . 56) (min-pixel-width . 140) (min-pixel-height-ignore . 42) (min-pixel-width-ignore . 70) (min-pixel-height-safe . 14) (min-pixel-width-safe . 28)) hc (pixel-width . 1916) (pixel-height . 966) (total-width . 274) (total-height . 69) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 945) (pixel-height . 966) (total-width . 135) (total-height . 69) (normal-height . 1.0) (normal-width . 0.49397590361445787) (buffer "*Compile-Log*" (selected) (hscroll . 0) (fringes 10 11 nil) (margins nil) (scroll-bars 0 0 t nil) (vscroll . 0) (dedicated) (point . 3373) (start . 3373))) (leaf (last . t) (pixel-width . 971) (pixel-height . 966) (total-width . 139) (total-height . 69) (normal-height . 1.0) (normal-width . 0.5060240963855421) (buffer "*Packages*" (selected . t) (hscroll . 0) (fringes 10 11 nil) (margins nil) (scroll-bars 0 0 t nil) (vscroll . 0) (dedicated) (point . 1) (start . 1)))))])
+(setq desktop-saved-frameset [frameset 1 (21938 17434 924708 0) (desktop . "206") "annapawlicka@Firefly.local" nil nil ((((font-backend mac-ct ns) (fontsize . 0) (font . "-*-Menlo-normal-normal-normal-*-12-*-*-*-m-0-iso10646-1") (border-width . 0) (internal-border-width . 2) (vertical-scroll-bars) (foreground-color . "gray") (background-color . "black") (line-spacing) (left-fringe . 10) (right-fringe . 11) (menu-bar-lines . 1) (tool-bar-lines . 0) (title) (icon-type) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (alpha) (fullscreen) (display . "Firefly.local") (display-type . color) (background-mode . dark) (cursor-color . "#acfb5a") (border-color . "#222") (visibility) (horizontal-scroll-bars . t) (environment) (frameset--id . "811A-D0FF-6E35-E67F") (frameset--mini t) (modeline . t) (minibuffer . t) (unsplittable) (right-divider-width . 0) (bottom-divider-width . 0) (icon-name) (explicit-name) (tool-bar-position . top) (height . 35) (width . 80) (left + -292) (top + -1048)) ((min-height . 8) (min-width . 10) (min-height-ignore . 4) (min-width-ignore . 5) (min-height-safe . 2) (min-width-safe . 2) (min-pixel-height . 112) (min-pixel-width . 70) (min-pixel-height-ignore . 56) (min-pixel-width-ignore . 35) (min-pixel-height-safe . 28) (min-pixel-width-safe . 14)) vc (pixel-width . 581) (pixel-height . 476) (total-width . 83) (total-height . 34) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 581) (pixel-height . 238) (total-width . 83) (total-height . 17) (normal-height . 0.5) (normal-width . 1.0) (buffer "*scratch*" (selected) (hscroll . 0) (fringes 10 11 nil) (margins nil) (scroll-bars 0 0 nil nil) (vscroll . 0) (dedicated) (point . 192) (start . 1))) (leaf (last . t) (pixel-width . 581) (pixel-height . 238) (total-width . 83) (total-height . 17) (normal-height . 0.5) (normal-width . 1.0) (buffer "*Warnings*" (selected) (hscroll . 0) (fringes 10 11 nil) (margins nil) (scroll-bars 0 0 t nil) (vscroll . 0) (dedicated) (point . 363) (start . 1)))) (((font-backend mac-ct ns) (fontsize . 0) (font . "-*-Menlo-normal-normal-normal-*-12-*-*-*-m-0-iso10646-1") (border-width . 0) (internal-border-width . 2) (vertical-scroll-bars) (foreground-color . "gray") (background-color . "black") (line-spacing) (left-fringe . 10) (right-fringe . 11) (menu-bar-lines . 1) (tool-bar-lines . 0) (title) (icon-type) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (alpha) (fullscreen . maximized) (horizontal-scroll-bars . t) (display-type . color) (background-mode . dark) (cursor-color . "#acfb5a") (environment) (border-color . "#222") (frameset--id . "3DCC-C051-BE43-12AD") (frameset--mini t . t) (modeline . t) (minibuffer . t) (unsplittable) (right-divider-width . 0) (bottom-divider-width . 0) (icon-name) (display . "Firefly.local") (explicit-name) (tool-bar-position . top) (visibility . t) (height . 70) (width . 270) (left . 0) (top . 31)) ((min-height . 4) (min-width . 20) (min-height-ignore . 2) (min-width-ignore . 10) (min-height-safe . 1) (min-width-safe . 4) (min-pixel-height . 56) (min-pixel-width . 140) (min-pixel-height-ignore . 28) (min-pixel-width-ignore . 70) (min-pixel-height-safe . 14) (min-pixel-width-safe . 28)) hc (pixel-width . 1916) (pixel-height . 966) (total-width . 274) (total-height . 69) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 957) (pixel-height . 966) (total-width . 137) (total-height . 69) (normal-height . 1.0) (normal-width . 0.5) (buffer "errors.clj" (selected) (hscroll . 0) (fringes 10 11 nil) (margins nil) (scroll-bars 0 0 nil nil) (vscroll . 0) (dedicated) (point . 12161) (start . 10698))) (leaf (last . t) (pixel-width . 959) (pixel-height . 966) (total-width . 137) (total-height . 69) (normal-height . 1.0) (normal-width . 0.5) (buffer "config.org" (selected . t) (hscroll . 0) (fringes 10 11 nil) (margins nil) (scroll-bars 0 0 t nil) (vscroll . 0) (dedicated) (point . 901) (start . 1)))))])
 (setq desktop-missing-file-warning nil)
 (setq tags-file-name nil)
 (setq tags-table-list nil)
-(setq search-ring '("merge-rec" "transform-" "product" "product-id" "pro" "?" "env-k" "recipients-by" "make-mailer" "mailer-de" "preload" "all-" "{" "all-hosts" "timo" "l"))
+(setq search-ring '("cider" "nexus" "configure" "ever" "error-re" "suppressed?" "format-err" "fetch-s" "supp" "hosst" "goog" "warn" "apps" "merge-rec" "transform-" "product"))
 (setq regexp-search-ring nil)
 (setq register-alist nil)
-(setq file-name-history '("/Users/annapawlicka/workspace/eReceipts-services/.git/COMMIT_EDITMSG" "~/workspace/eReceipts-services/api.receipt/test/eReceipts/api/receipt_test.clj" "~/workspace/eReceipts-services/parser/src/eReceipts/parser/sams.clj" "~/workspace/eReceipts-services/api.receipt/src/eReceipts/api/receipt.clj" "/Users/annapawlicka/workspace/eReceipts-services/.git/COMMIT_EDITMSG" "~/workspace/eReceipts-services/deployment-tools/src/eReceipts/deployment_tools/crates/riemann.clj" "/Users/annapawlicka/workspace/eReceipts-services/.git/COMMIT_EDITMSG" "~/workspace/eReceipts-services/api.customer/src/eReceipts/api/customer/id.clj" "/Users/annapawlicka/workspace/eReceipts-services/.git/COMMIT_EDITMSG" "~/workspace/eReceipts-services/deployment-tools/resources/riemann/eReceipts/monitoring/streams/e2e.clj" "~/workspace/eReceipts-services/deployment-tools/resources/riemann/eReceipts/monitoring/email.clj" "~/workspace/eReceipts-services/deployment-tools/src/eReceipts/deployment_tools/groups/monitoring_service.clj" "~/workspace/eReceipts-services/deployment-tools/test/eReceipts/deployment_tools/dev/user_test.clj" "~/workspace/eReceipts-services/deployment-tools/src/eReceipts/deployment_tools/db.clj" "~/workspace/eReceipts-services/deployment-tools/src/eReceipts/deployment_tools/core.clj" "~/workspace/eReceipts-services/deployment-tools/resources/riemann/riemann.config" "~/repositories/clojurescript/src/main/clojure/cljs/repl.clj" "/Users/annapawlicka/workspace/eReceipts-services/.git/COMMIT_EDITMSG" "~/workspace/eReceipts-services/parser/test/eReceipts/parser/sams_test_receipts.clj" "~/workspace/eReceipts-services/api.receipt/test/eReceipts/api/receipt/unassigned_purchased_items_test.clj" "~/workspace/eReceipts-services/api.receipt/src/eReceipts/api/receipt/unassigned_purchased_items.clj" "~/workspace/eReceipts-services/parser/src/eReceipts/parser/parser.clj" "~/workspace/eReceipts-services/parser/test/eReceipts/parser/sams_parser_test.clj" "/Users/annapawlicka/workspace/eReceipts-services/.git/COMMIT_EDITMSG" "~/workspace/eReceipts-services/deployment-tools/resources/riemann/heartbeats_test.clj" "~/workspace/eReceipts-services/deployment-tools/resources/riemann/e2e_test.clj" "~/workspace/eReceipts-services/deployment-tools/resources/riemann/email_test.clj" "~/repositories/clojurescript/src/main/clojure/cljs/analyzer/utils.clj" "~/repositories/clojurescript/src/main/clojure/cljs/version.clj" "~/workspace/eReceipts-services/deployment-tools/resources/riemann/eReceipts/monitoring/streams/errors.clj"))
+(setq file-name-history '("~/repositories/org-emacs/org/config.org" "/Users/annapawlicka/workspace/eReceipts-services/.git/COMMIT_EDITMSG" "~/workspace/eReceipts-services/deployment-tools/resources/riemann/eReceipts/monitoring/streams/metrics.clj" "/Users/annapawlicka/workspace/eReceipts-services/.git/COMMIT_EDITMSG" "~/workspace/eReceipts-services/deployment-tools/resources/riemann/eReceipts/monitoring/streams/errors.clj" "~/workspace/eReceipts-services/system-test/src/eReceipts/system_test/core.clj" "~/workspace/eReceipts-services/script/cassandra.sh" "~/workspace/eReceipts-services/script/build.sh" "/Users/annapawlicka/workspace/eReceipts-services/.git/COMMIT_EDITMSG" "~/repositories/clojurescript/src/main/clojure/cljs/closure.clj" "/Users/annapawlicka/workspace/eReceipts-services/.git/COMMIT_EDITMSG" "/Users/annapawlicka/workspace/eReceipts-services/.git/COMMIT_EDITMSG" "~/workspace/eReceipts-services/configuration/default/environment.edn" "~/workspace/eReceipts-services/deployment-tools/src/eReceipts/deployment_tools/crates/jvm_app.clj" "/Users/annapawlicka/workspace/eReceipts-services/.git/COMMIT_EDITMSG" "/Users/annapawlicka/workspace/eReceipts-services/.git/COMMIT_EDITMSG" "~/workspace/eReceipts-services/deployment-tools/resources/riemann/eReceipts/monitoring/streams/socket_exception.clj" "~/workspace/eReceipts-services/deployment-tools/resources/riemann/eReceipts/monitoring/streams/e2e.clj" "~/workspace/eReceipts-services/deployment-tools/resources/riemann/eReceipts/monitoring/streams/logstash.clj" "~/workspace/eReceipts-services/error-monitor/dev/user.clj" "~/workspace/eReceipts-services/error-monitor/src/eReceipts/error_monitor.clj" "/Users/annapawlicka/workspace/eReceipts-services/.git/COMMIT_EDITMSG" "~/workspace/eReceipts-services/deployment-tools/resources/riemann/eReceipts/monitoring/README.md" "~/workspace/eReceipts-services/deployment-tools/src/eReceipts/deployment_tools/groups/monitoring_service.clj" "~/workspace/eReceipts-services/deployment-tools/src/eReceipts/deployment_tools/crates/logstash.clj" "~/workspace/eReceipts-services/deployment-tools/src/eReceipts/deployment_tools/crates/kairosdb.clj" "~/workspace/eReceipts-services/deployment-tools/resources/kairosdb/conf/kairosdb.properties" "/Users/annapawlicka/workspace/eReceipts-services/.git/COMMIT_EDITMSG" "/Users/annapawlicka/workspace/eReceipts-services/.git/COMMIT_EDITMSG" "/Users/annapawlicka/workspace/eReceipts-services/.git/COMMIT_EDITMSG"))
 
 ;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 206
+  "/Users/annapawlicka/repositories/org-emacs/org/config.org"
+  "config.org"
+  'org-mode
+  '(auto-fill-mode window-number-mode helm-mode git-gutter+-mode projectile-mode yas-minor-mode company-mode)
+  901
+  '(1348 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines . t)))
+
+(desktop-create-buffer 206
+  "/Users/annapawlicka/workspace/eReceipts-services/deployment-tools/resources/riemann/eReceipts/monitoring/streams/errors.clj"
+  "errors.clj"
+  'clojure-mode
+  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode company-mode)
+  12139
+  '(12904 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/annapawlicka/workspace/eReceipts-services/error-monitor/src/eReceipts/error_monitor.clj"
+  "error_monitor.clj"
+  'clojure-mode
+  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
+  1159
+  '(580 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/annapawlicka/workspace/eReceipts-services/deployment-tools/resources/riemann/eReceipts/monitoring/streams/metrics.clj"
+  "metrics.clj"
+  'clojure-mode
+  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode company-mode)
+  2406
+  '(2520 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/annapawlicka/workspace/eReceipts-services/deployment-tools/resources/riemann/eReceipts/monitoring/email.clj"
+  "email.clj"
+  'clojure-mode
+  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
+  1225
+  '(329 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/annapawlicka/workspace/eReceipts-services/system-test/src/eReceipts/system_test/core.clj"
+  "core.clj"
+  'clojure-mode
+  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode company-mode)
+  8007
+  '(5229 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/annapawlicka/workspace/eReceipts-services/script/build.sh"
+  "build.sh"
+  'sh-mode
+  '(window-number-mode helm-mode git-gutter+-mode projectile-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode company-mode)
+  3216
+  '(1146 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/annapawlicka/workspace/eReceipts-services/script/cassandra.sh"
+  "cassandra.sh"
+  'sh-mode
+  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode company-mode)
+  3855
+  '(3855 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/annapawlicka/workspace/eReceipts-services/configuration/default/environment.edn"
+  "environment.edn"
+  'clojure-mode
+  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
+  1818
+  '(20145 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/annapawlicka/workspace/eReceipts-services/deployment-tools/src/eReceipts/deployment_tools/crates/jvm_app.clj"
+  "jvm_app.clj"
+  'clojure-mode
+  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
+  1524
+  '(1524 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  nil
+  "streams"
+  'dired-mode
+  '(window-number-mode helm-mode projectile-mode yas-minor-mode company-mode)
+  583
+  '(nil nil)
+  t
+  '("/Users/annapawlicka/workspace/eReceipts-services/deployment-tools/resources/riemann/eReceipts/monitoring/streams/")
+  nil)
+
+(desktop-create-buffer 206
+  "/Users/annapawlicka/workspace/eReceipts-services/deployment-tools/resources/riemann/eReceipts/monitoring/streams/socket_exception.clj"
+  "socket_exception.clj"
+  'clojure-mode
+  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
+  1742
+  '(1773 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/annapawlicka/workspace/eReceipts-services/deployment-tools/resources/riemann/eReceipts/monitoring/streams/e2e.clj"
+  "e2e.clj"
+  'clojure-mode
+  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
+  1466
+  '(324 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/annapawlicka/workspace/eReceipts-services/deployment-tools/resources/riemann/eReceipts/monitoring/streams/logstash.clj"
+  "logstash.clj"
+  'clojure-mode
+  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
+  1748
+  '(997 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/annapawlicka/workspace/eReceipts-services/error-monitor/dev/user.clj"
+  "user.clj"
+  'clojure-mode
+  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
+  698
+  '(5207 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/annapawlicka/workspace/eReceipts-services/deployment-tools/resources/riemann/eReceipts/monitoring/README.md"
+  "README.md"
+  'gfm-mode
+  '(auto-fill-mode visual-line-mode window-number-mode helm-mode git-gutter+-mode projectile-mode yas-minor-mode company-mode)
+  1766
+  '(1766 nil)
+  nil
+  nil
+  '((tab-width . 4) (buffer-file-coding-system . undecided-unix) (truncate-lines)))
+
+(desktop-create-buffer 206
+  "/Users/annapawlicka/workspace/eReceipts-services/deployment-tools/src/eReceipts/deployment_tools/groups/monitoring_service.clj"
+  "monitoring_service.clj"
+  'clojure-mode
+  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
+  586
+  '(901 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/annapawlicka/workspace/eReceipts-services/deployment-tools/src/eReceipts/deployment_tools/crates/logstash.clj"
+  "logstash.clj"
+  'clojure-mode
+  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
+  6116
+  '(6116 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/annapawlicka/workspace/eReceipts-services/deployment-tools/src/eReceipts/deployment_tools/crates/kairosdb.clj"
+  "kairosdb.clj"
+  'clojure-mode
+  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
+  1534
+  '(1424 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/annapawlicka/workspace/eReceipts-services/deployment-tools/resources/kairosdb/conf/kairosdb.properties"
+  "kairosdb.properties"
+  'conf-javaprop-mode
+  '(window-number-mode helm-mode git-gutter+-mode projectile-mode yas-minor-mode company-mode)
+  1214
+  '(1017 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/annapawlicka/workspace/eReceipts-services/configuration/stg0/environment.edn"
+  "environment.edn"
+  'clojure-mode
+  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
+  10086
+  '(2091 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/annapawlicka/workspace/eReceipts-services/deployment-tools/resources/riemann/riemann.config"
+  "riemann.config"
+  'clojure-mode
+  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
+  569
+  '(569 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/annapawlicka/workspace/eReceipts-services/admin-service/src/eReceipts/admin_service/views/test/scenarios.clj"
+  "scenarios.clj"
+  'fundamental-mode
+  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode yas-minor-mode eldoc-mode company-mode)
+  1668
+  '(1883 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/annapawlicka/workspace/eReceipts-services/deployment-tools/src/eReceipts/deployment_tools/crates/riemann.clj"
+  "riemann.clj"
+  'clojure-mode
+  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
+  345
+  '(345 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/annapawlicka/workspace/eReceipts-services/deployment-tools/dev/user.clj"
+  "user.clj"
+  'clojure-mode
+  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
+  14568
+  '(7333 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/annapawlicka/workspace/eReceipts-services/data.generators/src/eReceipts/data/generators/item/walmart.clj"
+  "walmart.clj"
+  'clojure-mode
+  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
+  588
+  '(588 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/annapawlicka/workspace/eReceipts-services/data.generators/src/eReceipts/data/generators/item/defaults.clj"
+  "defaults.clj"
+  'clojure-mode
+  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
+  8829
+  '(3075 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/annapawlicka/workspace/eReceipts-services/data.generators/src/eReceipts/data/generators/item.clj"
+  "item.clj"
+  'clojure-mode
+  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
+  875
+  '(4541 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/annapawlicka/workspace/eReceipts-services/data.generators/src/eReceipts/data/generators/vudu.clj"
+  "vudu.clj"
+  'clojure-mode
+  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
+  839
+  '(779 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/annapawlicka/workspace/eReceipts-services/data.generators/src/eReceipts/data/generators/adsaver.clj"
+  "adsaver.clj"
+  'clojure-mode
+  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
+  340
+  '(340 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/annapawlicka/workspace/eReceipts-services/data.generators/src/eReceipts/data/generators/receipt_text.clj"
+  "receipt_text.clj"
+  'clojure-mode
+  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
+  403
+  '(3846 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/annapawlicka/workspace/eReceipts-services/data.generators/src/eReceipts/data/generators/item/sams.clj"
+  "sams.clj"
+  'clojure-mode
+  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
+  929
+  '(718 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/annapawlicka/workspace/eReceipts-services/data.generators/src/eReceipts/data/generators/receipt/walmart.clj"
+  "walmart.clj"
+  'clojure-mode
+  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
+  7126
+  '(2697 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/annapawlicka/workspace/eReceipts-services/data.generators/src/eReceipts/data/generators/receipt/sams.clj"
+  "sams.clj"
+  'clojure-mode
+  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
+  1062
+  '(2408 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/annapawlicka/workspace/eReceipts-services/data.generators/src/eReceipts/data/generators/receipt/defaults.clj"
+  "defaults.clj"
+  'clojure-mode
+  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
+  2290
+  '(368 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/annapawlicka/workspace/eReceipts-services/data.generators/src/eReceipts/data/generators/receipt.clj"
+  "receipt.clj"
+  'clojure-mode
+  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
+  1665
+  '(972 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/annapawlicka/workspace/eReceipts-services/data.generators/src/eReceipts/data/generators.clj"
+  "generators.clj"
+  'clojure-mode
+  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
+  875
+  '(964 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/annapawlicka/workspace/eReceipts-services/api.customer/test/eReceipts/api/customer_test.clj"
+  "customer_test.clj"
+  'clojure-mode
+  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
+  252
+  '(252 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
 (desktop-create-buffer 206
   "/Users/annapawlicka/workspace/eReceipts-services/api.receipt/test/eReceipts/api/receipt_test.clj"
   "receipt_test.clj"
@@ -33,7 +451,7 @@
   "sams.clj"
   'clojure-mode
   '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
-  3728
+  2762
   '(2762 nil)
   nil
   nil
@@ -45,40 +463,7 @@
   'clojure-mode
   '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
   2650
-  '(12781 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/Users/annapawlicka/workspace/eReceipts-services/deployment-tools/src/eReceipts/deployment_tools/crates/riemann.clj"
-  "riemann.clj"
-  'clojure-mode
-  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
-  2560
-  '(2560 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/Users/annapawlicka/workspace/eReceipts-services/deployment-tools/resources/riemann/riemann.config"
-  "riemann.config"
-  'clojure-mode
-  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
-  833
-  '(833 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/Users/annapawlicka/workspace/eReceipts-services/deployment-tools/resources/riemann/eReceipts/monitoring/email.clj"
-  "email.clj"
-  'clojure-mode
-  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
-  4289
-  '(486 nil)
+  '(2991 nil)
   nil
   nil
   '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
@@ -101,39 +486,6 @@
   '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
   1712
   '(1326 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/Users/annapawlicka/workspace/eReceipts-services/deployment-tools/dev/user.clj"
-  "user.clj"
-  'clojure-mode
-  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
-  6465
-  '(7634 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/Users/annapawlicka/workspace/eReceipts-services/deployment-tools/src/eReceipts/deployment_tools/groups/monitoring_service.clj"
-  "monitoring_service.clj"
-  'clojure-mode
-  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
-  586
-  '(901 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/Users/annapawlicka/workspace/eReceipts-services/deployment-tools/resources/riemann/eReceipts/monitoring/streams/e2e.clj"
-  "e2e.clj"
-  'clojure-mode
-  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
-  1503
-  '(1488 nil)
   nil
   nil
   '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
@@ -167,61 +519,6 @@
   '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
   706
   '(706 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/Users/annapawlicka/repositories/hello-world/project.clj"
-  "project.clj"
-  'clojure-mode
-  '(window-number-mode helm-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
-  589
-  '(153 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/Users/annapawlicka/repositories/clojurescript/src/main/clojure/cljs/version.clj"
-  "version.clj"
-  'clojure-mode
-  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
-  304
-  '(764 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix)))
-
-(desktop-create-buffer 206
-  "/Users/annapawlicka/repositories/clojurescript/src/main/clojure/cljs/repl.clj"
-  "repl.clj"
-  'clojure-mode
-  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
-  1262
-  '(1130 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/Users/annapawlicka/repositories/clojurescript/src/main/clojure/cljs/build/api.clj"
-  "api.clj"
-  'clojure-mode
-  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
-  1137
-  '(1136 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/Users/annapawlicka/repositories/clojurescript/src/main/clojure/cljs/closure.clj"
-  "closure.clj"
-  'clojure-mode
-  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
-  2856
-  '(718 nil)
   nil
   nil
   '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
@@ -286,7 +583,7 @@
   "heartbeats.clj"
   'clojure-mode
   '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
-  5896
+  5855
   '(4059 nil)
   nil
   nil
@@ -315,77 +612,11 @@
   '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
 
 (desktop-create-buffer 206
-  "/Users/annapawlicka/repositories/hello-world/scripts/build.clj"
-  "build.clj"
-  'clojure-mode
-  '(window-number-mode helm-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
-  301
-  '(34 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/Users/annapawlicka/repositories/clojurescript/src/main/clojure/cljs/analyzer/utils.clj"
-  "utils.clj"
-  'clojure-mode
-  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
-  860
-  '(526 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/Users/annapawlicka/workspace/eReceipts-services/script/build.sh"
-  "build.sh"
-  'sh-mode
-  '(window-number-mode helm-mode git-gutter+-mode projectile-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode company-mode)
-  2596
-  '(2529 nil)
-  nil
-  nil
-  '((buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/Users/annapawlicka/repositories/clojurescript/src/main/cljs/cljs/core.cljs"
-  "core.cljs"
-  'clojure-mode
-  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
-  1044
-  '(729 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/Users/annapawlicka/workspace/eReceipts-services/deployment-tools/resources/riemann/eReceipts/monitoring/streams/metrics.clj"
-  "metrics.clj"
-  'clojure-mode
-  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
-  4953
-  '(3264 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/Users/annapawlicka/workspace/eReceipts-services/deployment-tools/resources/riemann/eReceipts/monitoring/streams/errors.clj"
-  "errors.clj"
-  'clojure-mode
-  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
-  21065
-  '(12749 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
   "/Users/annapawlicka/workspace/eReceipts-services/deployment-tools/resources/riemann/run-tests.sh"
   "run-tests.sh"
   'sh-mode
   '(window-number-mode helm-mode git-gutter+-mode projectile-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode company-mode)
-  1592
+  1020
   '(791 nil)
   nil
   nil
@@ -414,177 +645,12 @@
   '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
 
 (desktop-create-buffer 206
-  "/Users/annapawlicka/workspace/eReceipts-services/deployment-tools/resources/riemann/eReceipts/monitoring/streams/socket_exception.clj"
-  "socket_exception.clj"
-  'clojure-mode
-  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
-  1651
-  '(1773 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/Users/annapawlicka/workspace/eReceipts-services/deployment-tools/resources/riemann/eReceipts/monitoring/streams/logstash.clj"
-  "logstash.clj"
-  'clojure-mode
-  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
-  997
-  '(997 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/Users/annapawlicka/repositories/clojurescript/src/main/clojure/cljs/core/macros.clj"
-  "macros.clj"
-  'clojure-mode
-  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
-  1674
-  '(810 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/Users/annapawlicka/repositories/clojurescript/src/main/clojure/cljs/util.cljc"
-  "util.cljc"
-  'clojure-mode
-  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
-  3596
-  '(679 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/Users/annapawlicka/repositories/clojurescript/src/main/clojure/cljs/env.cljc"
-  "env.cljc"
-  'clojure-mode
-  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
-  1279
-  '(985 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/Users/annapawlicka/workspace/eReceipts-services/data.generators/src/eReceipts/data/generators/receipt_text.clj"
-  "receipt_text.clj"
-  'clojure-mode
-  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
-  2106
-  '(3846 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/Users/annapawlicka/workspace/eReceipts-services/data.generators/src/eReceipts/data/generators/item/sams.clj"
-  "sams.clj"
-  'clojure-mode
-  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
-  718
-  '(718 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
   "/Users/annapawlicka/workspace/eReceipts-services/data.generators/src/eReceipts/data/generators/protocols.clj"
   "protocols.clj"
   'clojure-mode
   '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
   43
   '(nil nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/Users/annapawlicka/workspace/eReceipts-services/data.generators/src/eReceipts/data/generators/item/defaults.clj"
-  "defaults.clj"
-  'clojure-mode
-  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
-  8864
-  '(3075 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/Users/annapawlicka/workspace/eReceipts-services/data.generators/src/eReceipts/data/generators/receipt.clj"
-  "receipt.clj"
-  'clojure-mode
-  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
-  954
-  '(972 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/Users/annapawlicka/workspace/eReceipts-services/data.generators/src/eReceipts/data/generators/item.clj"
-  "item.clj"
-  'clojure-mode
-  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
-  1196
-  '(4541 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/Users/annapawlicka/repositories/clojurescript/changes.md"
-  "changes.md"
-  'gfm-mode
-  '(auto-fill-mode visual-line-mode window-number-mode helm-mode git-gutter+-mode projectile-mode yas-minor-mode company-mode)
-  1595
-  '(1595 nil)
-  nil
-  nil
-  '((tab-width . 4) (buffer-file-coding-system . undecided-unix) (truncate-lines)))
-
-(desktop-create-buffer 206
-  "/Users/annapawlicka/repositories/clojurescript/script/build"
-  "build"
-  'sh-mode
-  '(window-number-mode helm-mode git-gutter+-mode projectile-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode company-mode)
-  2366
-  '(1682 nil)
-  nil
-  nil
-  '((buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/Users/annapawlicka/repositories/clojurescript/bin/cljsc"
-  "cljsc"
-  'sh-mode
-  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode company-mode)
-  1
-  '(nil nil)
-  nil
-  nil
-  '((buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/Users/annapawlicka/repositories/clojurescript/README.md"
-  "README.md"
-  'gfm-mode
-  '(auto-fill-mode visual-line-mode window-number-mode helm-mode git-gutter+-mode projectile-mode yas-minor-mode company-mode)
-  740
-  '(632 nil)
-  nil
-  nil
-  '((tab-width . 4) (buffer-file-coding-system . undecided-unix) (truncate-lines)))
-
-(desktop-create-buffer 206
-  "/Users/annapawlicka/workspace/eReceipts-services/data.generators/src/eReceipts/data/generators/receipt/defaults.clj"
-  "defaults.clj"
-  'clojure-mode
-  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
-  368
-  '(368 nil)
   nil
   nil
   '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
@@ -601,34 +667,12 @@
   '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
 
 (desktop-create-buffer 206
-  "/Users/annapawlicka/workspace/eReceipts-services/data.generators/src/eReceipts/data/generators/item/walmart.clj"
-  "walmart.clj"
-  'clojure-mode
-  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
-  2600
-  '(1 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
   "/Users/annapawlicka/workspace/eReceipts-services/admin-service/src/eReceipts/admin_service/views/receipt.clj"
   "receipt.clj"
   'clojure-mode
   '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
   1401
   '(1401 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/Users/annapawlicka/workspace/eReceipts-services/data.generators/src/eReceipts/data/generators.clj"
-  "generators.clj"
-  'clojure-mode
-  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
-  4117
-  '(964 nil)
   nil
   nil
   '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
@@ -661,7 +705,7 @@
   'clojure-mode
   '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
   1128
-  '(17021 nil)
+  '(17156 nil)
   nil
   nil
   '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
@@ -689,34 +733,12 @@
   '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
 
 (desktop-create-buffer 206
-  "/Users/annapawlicka/workspace/eReceipts-services/data.generators/src/eReceipts/data/generators/receipt/walmart.clj"
-  "walmart.clj"
-  'clojure-mode
-  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
-  2881
-  '(2697 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
   "/Users/annapawlicka/workspace/eReceipts-services/system-test/test/eReceipts/system_test/phone_number.clj"
   "phone_number.clj"
   'clojure-mode
   '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
   4893
   '(1 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/Users/annapawlicka/workspace/eReceipts-services/data.generators/src/eReceipts/data/generators/receipt/sams.clj"
-  "sams.clj"
-  'clojure-mode
-  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
-  1135
-  '(2408 nil)
   nil
   nil
   '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
@@ -748,8 +770,8 @@
   "service_test.clj"
   'clojure-mode
   '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
-  24687
-  '(24687 nil)
+  2335
+  '(2335 nil)
   nil
   nil
   '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix)))
@@ -803,7 +825,7 @@
   "service_test.clj"
   'clojure-mode
   '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
-  886
+  588
   '(nil nil)
   nil
   nil
@@ -814,7 +836,7 @@
   "onboarding_service.clj"
   'clojure-mode
   '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
-  2477
+  2504
   '(1193 nil)
   nil
   nil
@@ -887,17 +909,6 @@
   '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
 
 (desktop-create-buffer 206
-  "/Users/annapawlicka/workspace/eReceipts-services/configuration/stg0/environment.edn"
-  "environment.edn"
-  'clojure-mode
-  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
-  2091
-  '(2091 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
   "/Users/annapawlicka/workspace/eReceipts-services/configuration/localhost/environment.edn"
   "environment.edn"
   'clojure-mode
@@ -915,17 +926,6 @@
   '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
   638
   '(638 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/Users/annapawlicka/workspace/eReceipts-services/configuration/default/environment.edn"
-  "environment.edn"
-  'clojure-mode
-  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
-  20100
-  '(19844 nil)
   nil
   nil
   '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
@@ -1012,8 +1012,8 @@
   "customer_receipts.clj"
   'clojure-mode
   '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
-  3937
-  '(3781 nil)
+  4370
+  '(4214 nil)
   nil
   nil
   '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
@@ -1056,8 +1056,8 @@
   "iam.clj"
   'clojure-mode
   '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
-  1676
-  '(2199 nil)
+  1487
+  '(2699 nil)
   nil
   nil
   '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
@@ -1068,7 +1068,7 @@
   'clojure-mode
   '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
   195
-  '(2797 nil)
+  '(3054 nil)
   nil
   nil
   '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
@@ -1178,7 +1178,7 @@
   'clojure-mode
   '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
   991
-  '(6841 nil)
+  '(6885 nil)
   nil
   nil
   '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
@@ -1189,7 +1189,7 @@
   'clojure-mode
   '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode eldoc-mode cider-mode company-mode)
   529
-  '(2204 nil)
+  '(2899 nil)
   nil
   nil
   '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
@@ -1210,8 +1210,8 @@
   "view.js"
   'js2-mode
   '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode rainbow-mode highlight-symbol-mode yas-minor-mode company-mode)
-  2059
-  '(2059 nil)
+  2122
+  '(2122 nil)
   nil
   nil
   '((buffer-file-coding-system . undecided-unix)))
@@ -1347,17 +1347,6 @@
   nil
   nil
   '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/Users/annapawlicka/repositories/org-emacs/org/config.org"
-  "config.org"
-  'org-mode
-  '(auto-fill-mode window-number-mode helm-mode git-gutter+-mode projectile-mode yas-minor-mode company-mode)
-  39508
-  '(898 nil)
-  nil
-  nil
-  '((buffer-file-coding-system . utf-8-unix) (truncate-lines . t)))
 
 (desktop-create-buffer 206
   "/Users/annapawlicka/workspace/eReceipts-services/tools/md-gen/src/eReceipts/md_gen.clj"
@@ -1694,8 +1683,8 @@
   "customer.clj"
   'fundamental-mode
   '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode yas-minor-mode eldoc-mode company-mode)
-  4877
-  '(16991 nil)
+  4698
+  '(16812 nil)
   nil
   nil
   '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
@@ -1729,28 +1718,6 @@
   '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode yas-minor-mode eldoc-mode company-mode)
   288
   '(288 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/Users/annapawlicka/workspace/eReceipts-services/admin-service/src/eReceipts/admin_service/views/test/scenarios.clj"
-  "scenarios.clj"
-  'fundamental-mode
-  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode yas-minor-mode eldoc-mode company-mode)
-  1883
-  '(1883 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/Users/annapawlicka/workspace/eReceipts-services/api.customer/test/eReceipts/api/customer_test.clj"
-  "customer_test.clj"
-  'fundamental-mode
-  '(window-number-mode helm-mode git-gutter+-mode projectile-mode paredit-mode rainbow-delimiters-mode yas-minor-mode eldoc-mode company-mode)
-  252
-  '(5323 nil)
   nil
   nil
   '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
