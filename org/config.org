@@ -41,6 +41,16 @@
      (defun track-mouse (e))
      (setq mouse-sel-mode t))
     #+END_SRC
+** Pragma block
+
+    #+BEGIN_SRC emacs-lisp
+     (defun insert-pragma-block ()
+       (interactive)
+       (insert ";;-------------------------------------------------------------------------------
+     ;; ## Pragma-block-name"))
+
+     (global-set-key (kbd "<f5> h") 'insert-pragma-block)
+    #+END_SRC
 * Globals
 
 ** Company mode
