@@ -49,7 +49,7 @@
        (insert ";;-------------------------------------------------------------------------------
      ;; ## Pragma-block-name"))
 
-     (global-set-key (kbd "<f5> h") 'insert-pragma-block)
+     (global-set-key (kbd "<f5> p") 'insert-pragma-block)
     #+END_SRC
 * Globals
 
