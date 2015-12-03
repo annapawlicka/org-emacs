@@ -158,6 +158,11 @@
           (insert (format "[#%s] " pivotal-id)))))
     (add-hook 'git-commit-mode-hook #'git-commit-template)
   #+END_SRC
+** Save Cider history
+
+   #+BEGIN_SRC emacs-lisp
+   (setq cider-repl-history-file "~/.emacs.d/cache/cider-history")
+   #+END_SRC
 * non-elpa
 
    #+BEGIN_SRC emacs-lisp
