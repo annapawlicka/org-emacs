@@ -163,6 +163,11 @@
    #+BEGIN_SRC emacs-lisp
    (setq cider-repl-history-file "~/.emacs.d/cache/cider-history")
    #+END_SRC
+** Auto-save in the visited file
+   #+BEGIN_SRC emacs-lisp
+   (setq auto-save-visited-file-name "true")
+   #+END_SRC
+
 * non-elpa
 
    #+BEGIN_SRC emacs-lisp
@@ -1258,9 +1263,3 @@
       (add-hook 'markdown-mode-hook
                 (lambda () (local-set-key (kbd "s-h") 'helm-markdown-headlines)))
     #+END_SRC
-* Finishing
-** auto-revert
-
-   #+BEGIN_SRC emacs-lisp
-     (diminish 'auto-revert-mode)
-   #+END_SRC
