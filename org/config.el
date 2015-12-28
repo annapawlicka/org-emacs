@@ -1,4 +1,3 @@
-
 (add-hook 'before-save-hook
           (lambda nil
            (delete-trailing-whitespace)))
@@ -21,6 +20,16 @@
                              (scroll-up 1)))
   (defun track-mouse (e))
   (setq mouse-sel-mode t))
+
+(defun insert-pragma-block ()
+  (interactive)
+  (insert ";;-------------------------------------------------------------------------------
+;; ## Pragma-block-name"))
+
+(global-set-key (kbd "<f5> p") 'insert-pragma-block)
+
+(setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
+(setq exec-path (append exec-path '("/usr/local/bin")))
 
 (add-hook 'after-init-hook 'global-company-mode)
 
@@ -63,6 +72,10 @@
       (goto-char (point-min))
       (insert (format "[#%s] " pivotal-id)))))
 (add-hook 'git-commit-mode-hook #'git-commit-template)
+
+(setq cider-repl-history-file "~/.emacs.d/cache/cider-history")
+
+(setq auto-save-visited-file-name t)
 
 (add-to-list 'load-path (concat user-emacs-directory "non-elpa/"))
 
@@ -271,6 +284,9 @@
 
 (maybe-install-and-require 'refheap)
 
+(setq ispell-program-name "aspell"
+      ispell-dictionary "english")
+
 (add-hook 'text-mode-hook
           (lambda ()
                   (flyspell-mode 1)
@@ -476,5 +492,3 @@
 
 (add-hook 'markdown-mode-hook
           (lambda () (local-set-key (kbd "s-h") 'helm-markdown-headlines)))
-
-(diminish 'auto-revert-mode)

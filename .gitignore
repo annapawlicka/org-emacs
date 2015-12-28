@@ -1,6 +1,6 @@
 pom.xml
 pom.xml.asc
-ac-comhist.dat
+ac-comphist.dat
 org-clock-save.el
 cider-history
 projectile-bookmarks.eld
@@ -12,7 +12,7 @@ projectile-bookmarks.eld
 /tmp/
 /auto-save-list/
 /var/
-/elpa/
+/emms/
 .lein-deps-sum
 .lein-repl-history
 .lein-plugins/

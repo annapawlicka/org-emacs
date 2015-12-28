@@ -53,6 +53,12 @@
     #+END_SRC
 * Globals
 
+** Update PATH
+
+   #+BEGIN_SRC emacs-lisp
+   (setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
+   (setq exec-path (append exec-path '("/usr/local/bin")))
+   #+END_SRC
 ** Company mode
 
    #+BEGIN_SRC emacs-lisp
@@ -165,7 +171,7 @@
    #+END_SRC
 ** Auto-save in the visited file
    #+BEGIN_SRC emacs-lisp
-   (setq auto-save-visited-file-name "true")
+   (setq auto-save-visited-file-name t)
    #+END_SRC
 
 
@@ -765,6 +771,11 @@
     #+END_SRC
 
 * Text Modes
+** Check spelling
+   #+BEGIN_SRC emacs-lisp
+   (setq ispell-program-name "aspell"
+         ispell-dictionary "english")
+   #+END_SRC
 ** Text Mode Basics
 
    If we are in a text mode we want flyspell and auto-fill-mode.
