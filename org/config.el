@@ -118,6 +118,8 @@
 (setq dired-listing-switches "-alh")
 
 (maybe-install-and-require 'helm)
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
+(global-set-key (kbd "M-x")     'helm-M-x)
 (helm-mode 1)
 
 (diminish 'helm-mode)
@@ -286,13 +288,6 @@
 
 (setq ispell-program-name "aspell"
       ispell-dictionary "english")
-
-(add-hook 'text-mode-hook
-          (lambda ()
-                  (flyspell-mode 1)
-                  (diminish 'flyspell-mode)
-                  (auto-fill-mode 1)
-                  (diminish 'auto-fill-function)))
 
 (setq org-src-fontify-natively t)
 
