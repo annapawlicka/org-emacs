@@ -35,3 +35,18 @@
 (org-babel-load-file (concat (getenv "HOME") "/.emacs.d/org/config.org"))
 (put 'erase-buffer 'disabled nil)
 (defvar clojure--prettify-symbols-alist nil)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(safe-local-variable-values
+   (quote
+    ((cider-refresh-after-fn . "user/go")
+     (cider-refresh-before-fn . "user/stop")))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
