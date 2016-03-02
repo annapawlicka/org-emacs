@@ -409,14 +409,10 @@
 
 *** window movement
 
-    I need to remap the windmove keys so that they don't conflict with
-    the org-mode or paredit keys.
+    Use Shift+arrow_keys to move cursor around split panes
 
     #+BEGIN_SRC emacs-lisp
-      (global-set-key [M-s-up] 'windmove-up)
-      (global-set-key [M-s-down] 'windmove-down)
-      (global-set-key [M-s-right] 'windmove-right)
-      (global-set-key [M-s-left] 'windmove-left)
+      (windmove-default-keybindings)
     #+END_SRC
 
 *** buffer movement
