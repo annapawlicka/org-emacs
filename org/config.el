@@ -95,8 +95,6 @@
 
 (maybe-install-and-require 'grandshell-theme)
 
-;; (load-theme 'emacslive-cyberpunk t)
-
 (when (memq window-system '(mac ns))
   (set-default-font "-apple-Menlo-medium-normal-normal-*-12-*-*-*-m-0-iso10646-1"))
 
@@ -166,9 +164,6 @@
 (projectile-global-mode)
 
 (diminish 'projectile-mode)
-
-;;  (maybe-install-and-require 'helm-projectile)
-;;  (global-set-key (kbd "s-t") 'helm-projectile)
 
 (show-paren-mode +1)
 
