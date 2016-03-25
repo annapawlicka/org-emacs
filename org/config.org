@@ -3,13 +3,6 @@
   There are a number of helper functions that we'll need through the
   rest of this. We'll just define them up here.
 
-** Delete trailing whitespace
-
-   #+BEGIN_SRC emacs-lisp
-   (add-hook 'before-save-hook
-             (lambda nil
-              (delete-trailing-whitespace)))
-   #+END_SRC
 ** load-if-exists
 
    This is just a nice function to load a file if it exists, but just
@@ -27,30 +20,6 @@
          (message (format "No %s file. So not loading one." file))))
    #+END_SRC
 
-** Mouse mode in iTerm 2
-    #+BEGIN_SRC emacs-lisp
-   (unless window-system
-     (require 'mouse)
-     (xterm-mouse-mode t)
-     (global-set-key [mouse-4] '(lambda ()
-                                (interactive)
-                                (scroll-down 1)))
-     (global-set-key [mouse-5] '(lambda ()
-                                (interactive)
-                                (scroll-up 1)))
-     (defun track-mouse (e))
-     (setq mouse-sel-mode t))
-    #+END_SRC
-** Pragma block
-
-    #+BEGIN_SRC emacs-lisp
-     (defun insert-pragma-block ()
-       (interactive)
-       (insert ";;-------------------------------------------------------------------------------
-     ;; ## Pragma-block-name"))
-
-     (global-set-key (kbd "<f5> p") 'insert-pragma-block)
-    #+END_SRC
 * Globals
 
 ** Update PATH
@@ -174,6 +143,39 @@
    (setq auto-save-visited-file-name t)
    #+END_SRC
 
+** Delete trailing whitespace
+
+   #+BEGIN_SRC emacs-lisp
+   (add-hook 'before-save-hook
+             (lambda nil
+              (delete-trailing-whitespace)))
+   #+END_SRC
+
+** Mouse mode in iTerm 2
+    #+BEGIN_SRC emacs-lisp
+   (unless window-system
+     (require 'mouse)
+     (xterm-mouse-mode t)
+     (global-set-key [mouse-4] '(lambda ()
+                                (interactive)
+                                (scroll-down 1)))
+     (global-set-key [mouse-5] '(lambda ()
+                                (interactive)
+                                (scroll-up 1)))
+     (defun track-mouse (e))
+     (setq mouse-sel-mode t))
+    #+END_SRC
+
+** Pragma block
+
+    #+BEGIN_SRC emacs-lisp
+     (defun insert-pragma-block ()
+       (interactive)
+       (insert ";;-------------------------------------------------------------------------------
+     ;; ## Pragma-block-name"))
+
+     (global-set-key (kbd "<f5> p") 'insert-pragma-block)
+    #+END_SRC
 
 * non-elpa
 

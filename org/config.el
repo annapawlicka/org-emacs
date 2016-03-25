@@ -1,32 +1,9 @@
-(add-hook 'before-save-hook
-          (lambda nil
-           (delete-trailing-whitespace)))
-
 (defun load-if-exists (file)
   (if (file-exists-p file)
       (progn
         (load file)
         (message (format "Loading file: %s" file)))
     (message (format "No %s file. So not loading one." file))))
-
-(unless window-system
-  (require 'mouse)
-  (xterm-mouse-mode t)
-  (global-set-key [mouse-4] '(lambda ()
-                             (interactive)
-                             (scroll-down 1)))
-  (global-set-key [mouse-5] '(lambda ()
-                             (interactive)
-                             (scroll-up 1)))
-  (defun track-mouse (e))
-  (setq mouse-sel-mode t))
-
-(defun insert-pragma-block ()
-  (interactive)
-  (insert ";;-------------------------------------------------------------------------------
-;; ## Pragma-block-name"))
-
-(global-set-key (kbd "<f5> p") 'insert-pragma-block)
 
 (setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
 (setq exec-path (append exec-path '("/usr/local/bin")))
@@ -76,6 +53,29 @@
 (setq cider-repl-history-file "~/.emacs.d/cache/cider-history")
 
 (setq auto-save-visited-file-name t)
+
+(add-hook 'before-save-hook
+          (lambda nil
+           (delete-trailing-whitespace)))
+
+(unless window-system
+  (require 'mouse)
+  (xterm-mouse-mode t)
+  (global-set-key [mouse-4] '(lambda ()
+                             (interactive)
+                             (scroll-down 1)))
+  (global-set-key [mouse-5] '(lambda ()
+                             (interactive)
+                             (scroll-up 1)))
+  (defun track-mouse (e))
+  (setq mouse-sel-mode t))
+
+(defun insert-pragma-block ()
+  (interactive)
+  (insert ";;-------------------------------------------------------------------------------
+;; ## Pragma-block-name"))
+
+(global-set-key (kbd "<f5> p") 'insert-pragma-block)
 
 (add-to-list 'load-path (concat user-emacs-directory "non-elpa/"))
 
