@@ -256,19 +256,6 @@
       (maybe-install-and-require 'grandshell-theme)
     #+END_SRC
 
-*** cyberpunk, I still love you
-
-    I really like the cyberpunk theme from [[https://github.com/overtone/emacs-live][emacs-live]] and [[https://twitter.com/samaaron][Sam Aaron]] is
-    a lovely guy. I wanted to avoid needing the old color-theme
-    mode. [[https://twitter.com/rikardglans][Rikard Glans]] was nice enought to port it over to the new
-    stuff.
-
-    I'm not using it at the moment as I'm trying out other themes.
-
-    #+BEGIN_SRC emacs-lisp
-      ;; (load-theme 'emacslive-cyberpunk t)
-    #+END_SRC
-
 ** fonts
 
    Ah, the joys of playing with different monospaced fonts on
