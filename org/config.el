@@ -140,10 +140,7 @@
 (global-set-key (kbd "C-c j") 'ace-jump-mode)
 (global-set-key (kbd "C-c k") 'ace-jump-mode-pop-mark)
 
-(global-set-key [M-s-up] 'windmove-up)
-(global-set-key [M-s-down] 'windmove-down)
-(global-set-key [M-s-right] 'windmove-right)
-(global-set-key [M-s-left] 'windmove-left)
+(windmove-default-keybindings)
 
 (maybe-install-and-require 'buffer-move)
 (global-set-key (kbd "<s-up>")     'buf-move-up)
