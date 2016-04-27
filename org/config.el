@@ -229,14 +229,38 @@
 
 (add-hook 'clojure-mode-hook lisp-hooks)
 
-(add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
-(add-hook 'cider-interaction-mode-hook 'cider-turn-on-eldoc-mode)
-
 (setq cider-history-file (concat user-emacs-directory "cider-history"))
 
 (define-key cider-mode-map (kbd "C-c C-d") 'ac-nrepl-popup-doc)
 
 (setq cider-show-error-buffer nil)
+
+(defun cider-ediff-hack ()
+ (interactive)
+ (let ((expected (get-text-property (point) 'actual))
+  (tmp-buffer (generate-new-buffer " *tmp*"))
+  (expected-buffer (generate-new-buffer " *expected*"))
+  (actual-buffer   (generate-new-buffer " *actual*")))
+ (with-current-buffer tmp-buffer
+  (insert expected)
+  (goto-char (point-min))
+  (re-search-forward "= ")
+  (let ((opoint (point)))
+    (forward-sexp 1)
+    (let* ((tpoint (point))
+           (our-exp (buffer-substring-no-properties opoint (point)))
+           (_ (forward-sexp 1))
+           (our-act (buffer-substring-no-properties tpoint (point) )))
+      (with-current-buffer expected-buffer
+        (insert our-exp)
+        (delete-trailing-whitespace))
+      (with-current-buffer actual-buffer
+        (insert our-act)
+        (delete-trailing-whitespace))
+      (apply 'ediff-buffers
+             (setq cider-test-ediff-buffers
+                   (list (buffer-name expected-buffer)
+                         (buffer-name actual-buffer)))))))))
 
 (maybe-install-and-require 'align-cljlet)
 

@@ -636,13 +636,6 @@
         (add-hook 'clojure-mode-hook lisp-hooks)
       #+END_SRC
 
-***** cider-mode-hooks
-
-      #+BEGIN_SRC emacs-lisp
-        (add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
-        (add-hook 'cider-interaction-mode-hook 'cider-turn-on-eldoc-mode)
-      #+END_SRC
-
 ***** Save cider history
 
       #+BEGIN_SRC emacs-lisp
@@ -661,6 +654,35 @@
 
      #+BEGIN_SRC emacs-lisp
       (setq cider-show-error-buffer nil)
+     #+END_SRC
+***** cider-test-report diff hook
+     #+BEGIN_SRC emacs-lisp
+      (defun cider-ediff-hack ()
+       (interactive)
+       (let ((expected (get-text-property (point) 'actual))
+        (tmp-buffer (generate-new-buffer " *tmp*"))
+        (expected-buffer (generate-new-buffer " *expected*"))
+        (actual-buffer   (generate-new-buffer " *actual*")))
+       (with-current-buffer tmp-buffer
+        (insert expected)
+        (goto-char (point-min))
+        (re-search-forward "= ")
+        (let ((opoint (point)))
+          (forward-sexp 1)
+          (let* ((tpoint (point))
+                 (our-exp (buffer-substring-no-properties opoint (point)))
+                 (_ (forward-sexp 1))
+                 (our-act (buffer-substring-no-properties tpoint (point) )))
+            (with-current-buffer expected-buffer
+              (insert our-exp)
+              (delete-trailing-whitespace))
+            (with-current-buffer actual-buffer
+              (insert our-act)
+              (delete-trailing-whitespace))
+            (apply 'ediff-buffers
+                   (setq cider-test-ediff-buffers
+                         (list (buffer-name expected-buffer)
+                               (buffer-name actual-buffer)))))))))
      #+END_SRC
 **** align let forms
 
