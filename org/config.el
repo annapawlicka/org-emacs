@@ -52,6 +52,8 @@
 
 (setq cider-repl-history-file "~/.emacs.d/cache/cider-history")
 
+(setq cider-repl-display-help-banner nil)
+
 (setq auto-save-visited-file-name t)
 
 (add-hook 'before-save-hook

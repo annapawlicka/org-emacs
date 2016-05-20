@@ -138,6 +138,10 @@
    #+BEGIN_SRC emacs-lisp
    (setq cider-repl-history-file "~/.emacs.d/cache/cider-history")
    #+END_SRC
+** Remove cider banner
+   #+BEGIN_SRC emacs-lisp
+   (setq cider-repl-display-help-banner nil)
+   #+END_SRC
 ** Auto-save in the visited file
    #+BEGIN_SRC emacs-lisp
    (setq auto-save-visited-file-name t)
