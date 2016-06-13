@@ -181,6 +181,12 @@
      (global-set-key (kbd "<f5> p") 'insert-pragma-block)
     #+END_SRC
 
+** Don't split windows automatically
+   #+BEGIN_SRC emacs-lisp
+   (setq split-height-threshold nil
+         split-width-threshold nil)
+   #+END_SRC
+
 * non-elpa
 
    #+BEGIN_SRC emacs-lisp
