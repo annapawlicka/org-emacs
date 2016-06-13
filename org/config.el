@@ -79,6 +79,9 @@
 
 (global-set-key (kbd "<f5> p") 'insert-pragma-block)
 
+(setq split-height-threshold nil
+      split-width-threshold nil)
+
 (add-to-list 'load-path (concat user-emacs-directory "non-elpa/"))
 
 (global-set-key (kbd "M-3") '(lambda () (interactive) (insert "#")))
