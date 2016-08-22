@@ -244,6 +244,13 @@
    #+END_SRC
 
 * Pretty Emacs is pretty
+** Fira Code
+   TBA
+
+    #+BEGIN_SRC emacs-lisp
+
+    #+END_SRC
+
 ** color themes
 
 *** custom-theme-directory
@@ -985,3 +992,14 @@
       (add-hook 'markdown-mode-hook
                 (lambda () (local-set-key (kbd "s-h") 'helm-markdown-headlines)))
     #+END_SRC
+* Social media
+** IRC
+   Let's use IRC in Emacs because why not.
+
+   #+BEGIN_SRC emacs-lisp
+     (maybe-install-and-require 'erc)
+     (setq erc-hide-list '("JOIN" "PART" "QUIT"))
+     (setq erc-autojoin-channels-alist
+          '(("freenode.net" "#emacs" "#clojure" "#clojurescript")))
+     (erc :server "irc.freenode.net" :port 6667 :nick "annapawlicka")
+   #+END_SRC
