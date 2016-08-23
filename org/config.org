@@ -245,7 +245,8 @@
 
 * Pretty Emacs is pretty
 ** Fira Code
-   TBA
+   I want me some gorgeous ligatures. More info here:
+   https://github.com/tonsky/FiraCode
 
     #+BEGIN_SRC emacs-lisp
     (when (window-system)
