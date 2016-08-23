@@ -96,6 +96,38 @@
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
 
+(when (window-system)
+    (set-default-font "Fira Code"))
+  (let ((alist '((33 . ".\\(?:\\(?:==\\|!!\\)\\|[!=]\\)")
+                 (35 . ".\\(?:###\\|##\\|_(\\|[#(?[_{]\\)")
+                 (36 . ".\\(?:>\\)")
+                 (37 . ".\\(?:\\(?:%%\\)\\|%\\)")
+                 (38 . ".\\(?:\\(?:&&\\)\\|&\\)")
+                 (42 . ".\\(?:\\(?:\\*\\*/\\)\\|\\(?:\\*[*/]\\)\\|[*/>]\\)")
+                 (43 . ".\\(?:\\(?:\\+\\+\\)\\|[+>]\\)")
+                 (45 . ".\\(?:\\(?:-[>-]\\|<<\\|>>\\)\\|[<>}~-]\\)")
+                 (46 . ".\\(?:\\(?:\\.[.<]\\)\\|[.=-]\\)")
+                 (47 . ".\\(?:\\(?:\\*\\*\\|//\\|==\\)\\|[*/=>]\\)")
+                 (48 . ".\\(?:x[a-zA-Z]\\)")
+                 (58 . ".\\(?:::\\|[:=]\\)")
+                 (59 . ".\\(?:;;\\|;\\)")
+                 (60 . ".\\(?:\\(?:!--\\)\\|\\(?:~~\\|->\\|\\$>\\|\\*>\\|\\+>\\|--\\|<[<=-]\\|=[<=>]\\||>\\)\\|[*$+~/<=>|-]\\)")
+                 (61 . ".\\(?:\\(?:/=\\|:=\\|<<\\|=[=>]\\|>>\\)\\|[<=>~]\\)")
+                 (62 . ".\\(?:\\(?:=>\\|>[=>-]\\)\\|[=>-]\\)")
+                 (63 . ".\\(?:\\(\\?\\?\\)\\|[:=?]\\)")
+                 (91 . ".\\(?:]\\)")
+                 (92 . ".\\(?:\\(?:\\\\\\\\\\)\\|\\\\\\)")
+                 (94 . ".\\(?:=\\)")
+                 (119 . ".\\(?:ww\\)")
+                 (123 . ".\\(?:-\\)")
+                 (124 . ".\\(?:\\(?:|[=|]\\)\\|[=>|]\\)")
+                 (126 . ".\\(?:~>\\|~~\\|[>=@~-]\\)")
+                 )
+                 ))
+(dolist (char-regexp alist)
+  (set-char-table-range composition-function-table (car char-regexp)
+                        `([,(cdr char-regexp) 0 font-shape-gstring]))))
+
 (setq custom-theme-directory (concat user-emacs-directory "themes"))
 
 (maybe-install-and-require 'grandshell-theme)
@@ -365,3 +397,9 @@
 
 (add-hook 'markdown-mode-hook
           (lambda () (local-set-key (kbd "s-h") 'helm-markdown-headlines)))
+
+(maybe-install-and-require 'erc)
+(setq erc-hide-list '("JOIN" "PART" "QUIT"))
+(setq erc-autojoin-channels-alist
+     '(("freenode.net" "#emacs" "#clojure" "#clojurescript")))
+(erc :server "irc.freenode.net" :port 6667 :nick "annapawlicka")
