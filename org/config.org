@@ -277,9 +277,7 @@
                    (119 . ".\\(?:ww\\)")
                    (123 . ".\\(?:-\\)")
                    (124 . ".\\(?:\\(?:|[=|]\\)\\|[=>|]\\)")
-                   (126 . ".\\(?:~>\\|~~\\|[>=@~-]\\)")
-                   )
-                   ))
+                   (126 . ".\\(?:~>\\|~~\\|[>=@~-]\\)"))))
   (dolist (char-regexp alist)
     (set-char-table-range composition-function-table (car char-regexp)
                           `([,(cdr char-regexp) 0 font-shape-gstring]))))
@@ -312,11 +310,12 @@
 ** fonts
 
    Ah, the joys of playing with different monospaced fonts on
-   emacs. Menlo seems to be the one I'm happiest with on my MBA.
+   emacs. I'm using Fira Code now. But Menlo is a good alternative when you
+   don't want to code in a char grid and aren't that crazy about ligatures.
 
    #+BEGIN_SRC emacs-lisp
-     (when (memq window-system '(mac ns))
-       (set-default-font "-apple-Menlo-medium-normal-normal-*-12-*-*-*-m-0-iso10646-1"))
+    ;; (when (memq window-system '(mac ns))
+      ;; (set-default-font "-apple-Menlo-medium-normal-normal-*-12-*-*-*-m-0-iso10646-1"))
    #+END_SRC
 
 ** bars, menus and numbers
