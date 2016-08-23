@@ -258,7 +258,10 @@
                    (42 . ".\\(?:\\(?:\\*\\*/\\)\\|\\(?:\\*[*/]\\)\\|[*/>]\\)")
                    (43 . ".\\(?:\\(?:\\+\\+\\)\\|[+>]\\)")
                    (45 . ".\\(?:\\(?:-[>-]\\|<<\\|>>\\)\\|[<>}~-]\\)")
-                   (46 . ".\\(?:\\(?:\\.[.<]\\)\\|[.=-]\\)")
+                   ;; commenting this out to avoid
+                   ;; error in process filter: Attempt to shape unibyte text
+                   ;; when running cider
+                   ;; (46 . ".\\(?:\\(?:\\.[.<]\\)\\|[.=-]\\)")
                    (47 . ".\\(?:\\(?:\\*\\*\\|//\\|==\\)\\|[*/=>]\\)")
                    (48 . ".\\(?:x[a-zA-Z]\\)")
                    (58 . ".\\(?:::\\|[:=]\\)")
@@ -1030,6 +1033,6 @@
      (maybe-install-and-require 'erc)
      (setq erc-hide-list '("JOIN" "PART" "QUIT"))
      (setq erc-autojoin-channels-alist
-          '(("freenode.net" "#emacs" "#clojure" "#clojurescript")))
+          '(("freenode.net" "#clojure")))
      (erc :server "irc.freenode.net" :port 6667 :nick "annapawlicka")
    #+END_SRC
