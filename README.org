@@ -1,6 +1,8 @@
 * Introduction
 
   Minimal (well, subjectively speaking) Emacs config in org-mode.
+  It's started as a fork of Bruce Durling's [(https://github.com/otfrom/otfrom-org-emacs)[org-mode Emacs setup]
+  in 2013. It's hard to find a clearer configuration for Emacs than org-mode.
 
   The real content is in [[./org/config.org][config.org]], which would probably be more
   interesting to read.
@@ -19,17 +21,12 @@
   Here are the things this emacs config gives examples for:
 
   - clojure support with cider
-  - Separating custom.el from the rest of your files.
   - hippie expand
-  - upcasing and downcasing
   - Using diminish to clean up a mode-line
   - Adding non-elpa files
   - Using multiple elpa package archives
   - Using color themes and custom fonts
-  - removing chrome from the windows
   - very basic helm mode setup
   - magit & git gutter mode
   - paredit and rainbow delimiters
-  - using add-hook
-  - deft and org-mode
   - emacs on Mac OS X fixes
