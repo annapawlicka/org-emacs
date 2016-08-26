@@ -15,6 +15,7 @@ projectile-bookmarks.eld
 /auto-save-list/
 /var/
 /emms/
+/org/config.el
 .lein-deps-sum
 .lein-repl-history
 .lein-plugins/
