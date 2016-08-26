@@ -5,6 +5,8 @@ org-clock-save.el
 cider-history
 projectile-bookmarks.eld
 *jar
+/non-elpa
+/elpa
 /lib/
 /classes/
 /target/
