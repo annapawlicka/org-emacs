@@ -524,6 +524,16 @@
      (diminish 'projectile-mode)
    #+END_SRC
 
+** key bindings
+
+   #+BEGIN_SRC emacs-lisp
+     (defun backward-kill-line (arg)
+       "Kill ARG lines backward."
+       (interactive "p")
+       (kill-line (- 1 arg)))
+     (global-set-key "\C-cu" 'backward-kill-line) ;; `C-c u'
+   #+END_SRC
+
 * Programming Modes
 ** prog-mode
 *** Parentheses
@@ -1029,10 +1039,12 @@
 ** IRC
    Let's use IRC in Emacs because why not.
 
+   Disabling it for now - don't like it when there are distractions in my
+   Emacs
    #+BEGIN_SRC emacs-lisp
-     (maybe-install-and-require 'erc)
-     (setq erc-hide-list '("JOIN" "PART" "QUIT"))
-     (setq erc-autojoin-channels-alist
-          '(("freenode.net" "#clojure")))
-     (erc :server "irc.freenode.net" :port 6667 :nick "annapawlicka")
+   ;;  (maybe-install-and-require 'erc)
+   ;;  (setq erc-hide-list '("JOIN" "PART" "QUIT"))
+   ;;  (setq erc-autojoin-channels-alist
+   ;;       '(("freenode.net" "#clojure")))
+   ;;  (erc :server "irc.freenode.net" :port 6667 :nick "annapawlicka")
    #+END_SRC
