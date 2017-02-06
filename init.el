@@ -7,11 +7,10 @@
 ;; http://orgmode.org/worg/org-contrib/babel/intro.html
 (require 'package)
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-			;; ("marmalade" . "http://marmalade-repo.org/packages/")
+			 ("marmalade" . "http://marmalade-repo.org/packages/")
                          ("org" . "http://orgmode.org/elpa/")
-                         ("melpa" . "http://melpa.milkbox.net/packages/")
-                        ;; ("melpa-stable" . "http://melpa-stable.milkbox.net/packages/")
-                         ))
+                        ;; ("melpa" . "http://melpa.milkbox.net/packages/")
+                         ("melpa-stable" . "http://melpa-stable.milkbox.net/packages/")))
 
 ;; This means we prefer things from ~/.emacs.d/elpa over the standard packages.
 (package-initialize)
@@ -40,6 +39,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   (quote
+    ("7c14c764f15a135f12824c322f2ec7b576fd06f1ca634c58538c6b47f53b069a" default)))
  '(safe-local-variable-values
    (quote
     ((cider-refresh-after-fn . "user/go")
