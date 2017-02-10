@@ -391,6 +391,12 @@
      (global-set-key (kbd "C-x C-f") 'helm-find-files)
      (global-set-key (kbd "M-x")     'helm-M-x)
      (helm-mode 1)
+     (set-face-attribute 'helm-selection nil
+       :background "purple"
+       :foreground "black")
+     (set-face-attribute 'helm-ff-directory nil
+       :background "grey17"
+       :foreground "OrangeRed3")
    #+END_SRC
 
    We can diminish how much room helm-mode takes up on the command

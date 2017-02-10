@@ -51,4 +51,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(helm-buffer-directory ((t (:background "gray8" :foreground "firebrick3"))))
+ '(helm-ff-directory ((t (:background "gray17" :foreground "OrangeRed3"))))
+ '(helm-selection ((t (:background "purple" :foreground "black" :underline nil)))))
