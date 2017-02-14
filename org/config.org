@@ -906,20 +906,6 @@
       (setq org-feed-retrieve-method 'curl)
     #+END_SRC
 
-**** The Blog Roll
-
-     And this is my incomplete and silly blog roll. There are many
-     more things that I should read and I read very few on the ones
-     in here regularly. If I know you and you are in here, you
-     should really tweet about your new blog posts more.
-
-     If I'm honest, really this is how I keep up with various
-     webcomics.
-
-     #+BEGIN_SRC emacs-lisp
-       (load-if-exists (concat user-emacs-directory "local/blog-roll.el"))
-     #+END_SRC
-
 *** org and magit
 
     Because sometimes you want to link to that particular commit.
@@ -929,7 +915,6 @@
     #+BEGIN_SRC emacs-lisp
       (maybe-install-and-require 'org-magit)
     #+END_SRC
-
 
 ** html, sgml, xml
 
@@ -965,7 +950,6 @@
      #+BEGIN_SRC emacs-lisp
        (add-hook 'css-mode-hook 'rainbow-mode)
      #+END_SRC
-
 
 ** markdown
 
@@ -1014,6 +998,27 @@
       (add-hook 'markdown-mode-hook
                 (lambda () (local-set-key (kbd "s-h") 'helm-markdown-headlines)))
     #+END_SRC
+** Syntax checking
+*** Flycheck
+
+    #+BEGIN_SRC emacs-lisp
+    (maybe-install-and-require 'flycheck)
+    (maybe-install-and-require 'flycheck-color-mode-line)
+    (global-flycheck-mode)
+
+    ;; Show appropriate color in the mode line
+    (eval-after-load "flycheck"
+      '(add-hook 'flycheck-mode-hook 'flycheck-color-mode-line-mode))
+    #+END_SRC
+
+*** Joker
+    Clojure syntax checker \o/ You can download it from here:
+    https://github.com/candid82/flycheck-joker
+
+    #+BEGIN_SRC emacs-lisp
+     (load-if-exists (concat user-emacs-directory "local/flycheck-joker.el"))
+    #+END_SRC
+
 * Social media
 ** IRC
    Let's use IRC in Emacs because why not.
