@@ -21,13 +21,13 @@
    #+END_SRC
 
 * Globals
-
 ** Update PATH
 
    #+BEGIN_SRC emacs-lisp
    (setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
    (setq exec-path (append exec-path '("/usr/local/bin")))
    #+END_SRC
+
 ** Company mode
 
    #+BEGIN_SRC emacs-lisp
@@ -1036,9 +1036,9 @@
    Disabling it for now - don't like it when there are distractions in my
    Emacs
    #+BEGIN_SRC emacs-lisp
-   ;;  (maybe-install-and-require 'erc)
-   ;;  (setq erc-hide-list '("JOIN" "PART" "QUIT"))
-   ;;  (setq erc-autojoin-channels-alist
-   ;;       '(("freenode.net" "#clojure")))
-   ;;  (erc :server "irc.freenode.net" :port 6667 :nick "annapawlicka")
+     (maybe-install-and-require 'erc)
+     (setq erc-hide-list '("JOIN" "PART" "QUIT"))
+     (setq erc-autojoin-channels-alist
+          '(("freenode.net" "#clojure")))
+     (erc :server "irc.freenode.net" :port 6667 :nick "annapawlicka")
    #+END_SRC
