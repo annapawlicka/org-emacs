@@ -89,8 +89,8 @@
    Allows to discover more of Emacs using context menus.
 
    #+BEGIN_SRC emacs-lisp
-    ;; (maybe-install-and-require 'discover)
-    ;; (global-discover-mode 1)
+     (maybe-install-and-require 'discover)
+     (global-discover-mode 1)
    #+END_SRC
 
 ** Disable beep
@@ -197,25 +197,6 @@
 
 * OSX Specific Setup
 
-** # is broken on UK Macs
-
-   On UK keyboards shift-3 is bound to £. This is a real pain. The #
-   character is usually bound to M-3. This also causes problems,
-   especially with things like window-number modes. We have a hacked
-   window-number mode below that maps window 3 to s-3, which solves
-   that problem. The # problem is solved with this bit of code below.
-
-   #+BEGIN_SRC emacs-lisp
-     (global-set-key (kbd "M-3") '(lambda () (interactive) (insert "#")))
-   #+END_SRC
-
-   We also need to deal with £ being a UTF-8 character so we don't get
-   annoying Â characters before non-ascii characters.
-
-   #+BEGIN_SRC emacs-lisp
-     (setq default-process-coding-system '(utf-8-unix . utf-8-unix))
-   #+END_SRC
-
 ** $PATH is broken
 
    If you don't run emacs in a terminal on Mac OS X then it can be
@@ -241,7 +222,7 @@
 
    #+BEGIN_SRC emacs-lisp
      (setq mouse-wheel-scroll-amount '(1 ((shift) . 1) ((control) . nil)))
-     (setq mouse-wheel-progressive-speed nil)
+     ;;(setq mouse-wheel-progressive-speed nil)
      (setq ring-bell-function 'ignore)
    #+END_SRC
 
@@ -286,8 +267,8 @@
    don't want to code in a char grid and aren't that crazy about ligatures.
 
    #+BEGIN_SRC emacs-lisp
-    ;; (when (memq window-system '(mac ns))
-      ;; (set-default-font "-apple-Menlo-medium-normal-normal-*-12-*-*-*-m-0-iso10646-1"))
+     (when (memq window-system '(mac ns))
+       (set-default-font "-apple-Menlo-medium-normal-normal-*-12-*-*-*-m-0-iso10646-1"))
    #+END_SRC
 
 ** bars, menus and numbers
@@ -514,11 +495,6 @@
 
 * Programming Modes
 ** prog-mode
-*** Clojure
-
-    #+BEGIN_SRC emacs-lisp
-      (maybe-install-and-require 'clojure-mode)
-    #+END_SRC
 *** Parentheses
 **** Show Parens
 
@@ -656,6 +632,13 @@
       #+END_SRC
 
 *** clojure
+
+    clojure-mode is must-have.
+
+    #+BEGIN_SRC emacs-lisp
+      (maybe-install-and-require 'clojure-mode)
+    #+END_SRC
+
 **** cider
 
 ***** install
@@ -771,11 +754,6 @@
      (add-to-list 'interpreter-mode-alist '("node" . js2-mode))
    #+END_SRC
 
-** pastebins
-
-   gist, pastebin, refheap. All good ways of sharing snippets of code
-   with people on irc or similar.
-
 * Text Modes
 ** Check spelling
    #+BEGIN_SRC emacs-lisp
@@ -887,13 +865,13 @@
 *** Flycheck
 
     #+BEGIN_SRC emacs-lisp
-    (maybe-install-and-require 'flycheck)
-    (maybe-install-and-require 'flycheck-color-mode-line)
-    (global-flycheck-mode)
+      (maybe-install-and-require 'flycheck)
+      (maybe-install-and-require 'flycheck-color-mode-line)
+      (global-flycheck-mode)
 
-    ;; Show appropriate color in the mode line
-    (eval-after-load "flycheck"
-      '(add-hook 'flycheck-mode-hook 'flycheck-color-mode-line-mode))
+      ;; Show appropriate color in the mode line
+      (eval-after-load "flycheck"
+        '(add-hook 'flycheck-mode-hook 'flycheck-color-mode-line-mode))
     #+END_SRC
 
 *** Joker
