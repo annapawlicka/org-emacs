@@ -124,6 +124,7 @@
 ** Pivotal hook
 
    #+BEGIN_SRC emacs-lisp
+    (maybe-install-and-require 's)
     (defun git-commit-template ()
       (let ((branch (magit-get-current-branch)))
         (when (setq pivotal-id (cadr (s-match "\\([0-9]+\\)-" branch)))
