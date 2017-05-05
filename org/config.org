@@ -31,6 +31,7 @@
 ** Company mode
 
    #+BEGIN_SRC emacs-lisp
+     (maybe-install-and-require 'company)
      (add-hook 'after-init-hook 'global-company-mode)
    #+END_SRC
 
@@ -88,8 +89,8 @@
    Allows to discover more of Emacs using context menus.
 
    #+BEGIN_SRC emacs-lisp
-     (maybe-install-and-require 'discover)
-     (global-discover-mode 1)
+    ;; (maybe-install-and-require 'discover)
+    ;; (global-discover-mode 1)
    #+END_SRC
 
 ** Disable beep
@@ -244,45 +245,6 @@
    #+END_SRC
 
 * Pretty Emacs is pretty
-** Fira Code
-   I want me some gorgeous ligatures. More info here:
-   https://github.com/tonsky/FiraCode
-
-    #+BEGIN_SRC emacs-lisp
-      ;; (when (window-system)
-      ;;   (set-default-font "Fira Code"))
-      ;; (let ((alist '((33 . ".\\(?:\\(?:==\\|!!\\)\\|[!=]\\)")
-      ;;                (35 . ".\\(?:###\\|##\\|_(\\|[#(?[_{]\\)")
-      ;;                (36 . ".\\(?:>\\)")
-      ;;                (37 . ".\\(?:\\(?:%%\\)\\|%\\)")
-      ;;                (38 . ".\\(?:\\(?:&&\\)\\|&\\)")
-      ;;                (42 . ".\\(?:\\(?:\\*\\*/\\)\\|\\(?:\\*[*/]\\)\\|[*/>]\\)")
-      ;;                (43 . ".\\(?:\\(?:\\+\\+\\)\\|[+>]\\)")
-      ;;                (45 . ".\\(?:\\(?:-[>-]\\|<<\\|>>\\)\\|[<>}~-]\\)")
-      ;;                ;; commenting this out to avoid
-      ;;                ;; error in process filter: Attempt to shape unibyte text
-      ;;                ;; when running cider
-      ;;                ;; (46 . ".\\(?:\\(?:\\.[.<]\\)\\|[.=-]\\)")
-      ;;                (47 . ".\\(?:\\(?:\\*\\*\\|//\\|==\\)\\|[*/=>]\\)")
-      ;;                (48 . ".\\(?:x[a-zA-Z]\\)")
-      ;;                (58 . ".\\(?:::\\|[:=]\\)")
-      ;;                (59 . ".\\(?:;;\\|;\\)")
-      ;;                (60 . ".\\(?:\\(?:!--\\)\\|\\(?:~~\\|->\\|\\$>\\|\\*>\\|\\+>\\|--\\|<[<=-]\\|=[<=>]\\||>\\)\\|[*$+~/<=>|-]\\)")
-      ;;                (61 . ".\\(?:\\(?:/=\\|:=\\|<<\\|=[=>]\\|>>\\)\\|[<=>~]\\)")
-      ;;                (62 . ".\\(?:\\(?:=>\\|>[=>-]\\)\\|[=>-]\\)")
-      ;;                (63 . ".\\(?:\\(\\?\\?\\)\\|[:=?]\\)")
-      ;;                (91 . ".\\(?:]\\)")
-      ;;                (92 . ".\\(?:\\(?:\\\\\\\\\\)\\|\\\\\\)")
-      ;;                (94 . ".\\(?:=\\)")
-      ;;                (119 . ".\\(?:ww\\)")
-      ;;                (123 . ".\\(?:-\\)")
-      ;;                (124 . ".\\(?:\\(?:|[=|]\\)\\|[=>|]\\)")
-      ;;                (126 . ".\\(?:~>\\|~~\\|[>=@~-]\\)"))))
-      ;;      (dolist (char-regexp alist)
-      ;;          (set-char-table-range composition-function-table (car char-regexp)
-      ;;               `([,(cdr char-regexp) 0 font-shape-gstring]))))
-    #+END_SRC
-
 ** color themes
 
 *** custom-theme-directory
@@ -302,6 +264,7 @@
     Back to the roots
 
     #+BEGIN_SRC emacs-lisp
+      (maybe-install-and-require 'cyberpunk-theme)
       (load-theme 'cyberpunk t)
     #+END_SRC
 
@@ -550,6 +513,11 @@
 
 * Programming Modes
 ** prog-mode
+*** Clojure
+
+    #+BEGIN_SRC emacs-lisp
+      (maybe-install-and-require 'clojure-mode)
+    #+END_SRC
 *** Parentheses
 **** Show Parens
 
@@ -758,16 +726,6 @@
                          (list (buffer-name expected-buffer)
                                (buffer-name actual-buffer)))))))))
      #+END_SRC
-**** align let forms
-
-     Pretty alignment of let, when-let, if-let, binding, loop,
-     with-open, literal hashes {}, defroute, cond, and condp
-     (except :>> subforms).
-
-     #+BEGIN_SRC emacs-lisp
-       (maybe-install-and-require 'align-cljlet)
-     #+END_SRC
-
 **** helm and clojure
 
      #+BEGIN_SRC emacs-lisp
@@ -780,14 +738,6 @@
 
        (add-hook 'clojure-mode-hook
                  (lambda () (local-set-key (kbd "s-h") 'helm-clojure-headlines)))
-     #+END_SRC
-
-**** Clojure Cheat Sheet
-
-     #+BEGIN_SRC emacs-lisp
-       (maybe-install-and-require 'clojure-cheatsheet)
-       (add-hook 'clojure-mode-hook
-                 (lambda () (local-set-key [s-f1] 'clojure-cheatsheet)))
      #+END_SRC
 
 **** sw1nn-cider-perspective or Engineering
@@ -824,24 +774,6 @@
 
    gist, pastebin, refheap. All good ways of sharing snippets of code
    with people on irc or similar.
-
-*** gist
-
-    As you probably already have a github account, having gist as a
-    way of sharing code snippets is a good idea.
-
-    #+BEGIN_SRC emacs-lisp
-      (maybe-install-and-require 'gist)
-    #+END_SRC
-
-*** refheap
-
-    I like [[http://refheap.com][refheap]] and Anthony Grimes seems like a nice guy. And it
-    is built in clojure.
-
-    #+BEGIN_SRC emacs-lisp
-      (maybe-install-and-require 'refheap)
-    #+END_SRC
 
 * Text Modes
 ** Check spelling
@@ -885,55 +817,7 @@
                 (lambda () (local-set-key (kbd "s-h") 'helm-org-headlines)))
     #+END_SRC
 
-*** org-cheatsheet
-
-    Having cheatsheets around is handy. Especially for sprawling
-    modes like org-mode.
-
-    #+BEGIN_SRC emacs-lisp
-      (maybe-install-and-require 'helm-orgcard)
-      (add-hook 'org-mode-hook
-                       (lambda () (local-set-key [s-f1] 'helm-orgcard)))
-    #+END_SRC
-
-*** org-feed
-
-    I really quite liked google as a blog reader. Before that I used
-    to use Bloglines, which I liked more. Now I find that I can use
-    emacs and org-mode to read RSS and atom.
-
-    #+BEGIN_SRC emacs-lisp
-      (setq org-feed-retrieve-method 'curl)
-    #+END_SRC
-
-*** org and magit
-
-    Because sometimes you want to link to that particular commit.
-
-    I added this functionality with this commit: [[magit:~/emacs-configs/otfrom-org-emacs/::commit@1dd7516][1dd7516]]
-
-    #+BEGIN_SRC emacs-lisp
-      (maybe-install-and-require 'org-magit)
-    #+END_SRC
-
 ** html, sgml, xml
-
-*** tagedit
-
-    This gives us paredit like editing for html
-
-    #+BEGIN_SRC emacs-lisp
-      (maybe-install-and-require 'tagedit)
-      (eval-after-load "sgml-mode"
-        '(progn
-           (require 'tagedit)
-           (tagedit-add-paredit-like-keybindings)
-           (add-hook 'html-mode-hook (lambda () (tagedit-mode 1)))))
-    #+END_SRC
-
-    #+BEGIN_SRC emacs-lisp
-      (tagedit-add-experimental-features)
-    #+END_SRC
 
 *** css
 
@@ -1037,8 +921,8 @@
    Emacs
    #+BEGIN_SRC emacs-lisp
      (maybe-install-and-require 'erc)
-     (setq erc-hide-list '("JOIN" "PART" "QUIT"))
-     (setq erc-autojoin-channels-alist
-          '(("freenode.net" "#clojure")))
-     (erc :server "irc.freenode.net" :port 6667 :nick "annapawlicka")
+     ;;(setq erc-hide-list '("JOIN" "PART" "QUIT"))
+     ;;(setq erc-autojoin-channels-alist
+      ;;    '(("freenode.net" "#clojure")))
+     ;;(erc :server "irc.freenode.net" :port 6667 :nick "annapawlicka")
    #+END_SRC
