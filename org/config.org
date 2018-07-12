@@ -121,20 +121,6 @@
    #+BEGIN_SRC emacs-lisp
      (desktop-save-mode 1)
    #+END_SRC
-** Pivotal hook
-
-   #+BEGIN_SRC emacs-lisp
-    (maybe-install-and-require 's)
-    (defun git-commit-template ()
-      (let ((branch (magit-get-current-branch)))
-        (when (setq pivotal-id (cadr (s-match "\\([0-9]+\\)-" branch)))
-          (newline 2)
-          (insert (format "Story: https://www.pivotaltracker.com/story/show/%s"
-                          pivotal-id))
-          (goto-char (point-min))
-          (insert (format "[#%s] " pivotal-id)))))
-    (add-hook 'git-commit-mode-hook #'git-commit-template)
-  #+END_SRC
 ** Save Cider history
 
    #+BEGIN_SRC emacs-lisp
@@ -267,8 +253,7 @@
    don't want to code in a char grid and aren't that crazy about ligatures.
 
    #+BEGIN_SRC emacs-lisp
-     (when (memq window-system '(mac ns))
-       (set-default-font "-apple-Menlo-medium-normal-normal-*-12-*-*-*-m-0-iso10646-1"))
+     (set-default-font "Menlo 14")
    #+END_SRC
 
 ** bars, menus and numbers
@@ -541,13 +526,12 @@
       (maybe-install-and-require 'yasnippet)
     #+END_SRC
 
-**** Snippet Directory
+**** Snippets
 
-     We need a place to add our snippets for each mode as well. We'll
-     put that in snippets.
+     Let's get the snippets installed
 
      #+BEGIN_SRC emacs-lisp
-       (setq yas/root-directory (concat user-emacs-directory "snippets"))
+       (maybe-install-and-require 'yasnippet-snippets)
      #+END_SRC
 
 **** Turn it on globally
@@ -879,7 +863,7 @@
     https://github.com/candid82/flycheck-joker
 
     #+BEGIN_SRC emacs-lisp
-     (load-if-exists (concat user-emacs-directory "local/flycheck-joker.el"))
+     (maybe-install-and-require 'flycheck-joker)
     #+END_SRC
 
 ** Diffing
