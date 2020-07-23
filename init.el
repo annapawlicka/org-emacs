@@ -9,8 +9,9 @@
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
 			 ("marmalade" . "http://marmalade-repo.org/packages/")
                          ("org" . "http://orgmode.org/elpa/")
-                        ;; ("melpa" . "http://melpa.milkbox.net/packages/")
-                         ("melpa-stable" . "http://melpa-stable.milkbox.net/packages/")))
+                         ("melpa" . "http://melpa.milkbox.net/packages/")
+                        ;; ("melpa-stable" . "http://melpa-stable.milkbox.net/packages/")
+                         ))
 
 ;; This means we prefer things from ~/.emacs.d/elpa over the standard packages.
 (package-initialize)
@@ -41,11 +42,17 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("7c14c764f15a135f12824c322f2ec7b576fd06f1ca634c58538c6b47f53b069a" default)))
+    ("addfaf4c6f76ef957189d86b1515e9cf9fcd603ab6da795b82b79830eed0b284" "7c14c764f15a135f12824c322f2ec7b576fd06f1ca634c58538c6b47f53b069a" default)))
+ '(helm-ff-lynx-style-map t)
+ '(horizontal-scroll-bar-mode nil)
+ '(package-selected-packages
+   (quote
+    (restclient git-link graphql company flycheck-color-mode-line flycheck markdown-mode tagedit org-magit helm-orgcard refheap gist js2-mode helm-cider yasnippet use-package smartscan rainbow-mode rainbow-delimiters projectile paredit multiple-cursors magit highlight-symbol helm git-gutter-fringe exec-path-from-shell discover diminish cyberpunk-theme cider buffer-move align-cljlet ace-jump-mode)))
  '(safe-local-variable-values
    (quote
     ((cider-refresh-after-fn . "user/go")
-     (cider-refresh-before-fn . "user/stop")))))
+     (cider-refresh-before-fn . "user/stop"))))
+ '(scroll-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

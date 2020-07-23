@@ -20,6 +20,12 @@
          (message (format "No %s file. So not loading one." file))))
    #+END_SRC
 
+** use-package
+
+    #+BEGIN_SRC emacs-lisp
+     (maybe-install-and-require 'use-package)
+    #+END_SRC
+
 * Globals
 ** Update PATH
 
@@ -253,7 +259,8 @@
    don't want to code in a char grid and aren't that crazy about ligatures.
 
    #+BEGIN_SRC emacs-lisp
-     (set-default-font "Menlo 14")
+     (when (memq window-system '(mac ns))
+       (set-default-font "-apple-Menlo-medium-normal-normal-*-14-*-*-*-m-0-iso10646-1"))
    #+END_SRC
 
 ** bars, menus and numbers
@@ -318,6 +325,7 @@
 
    #+BEGIN_SRC emacs-lisp
      (maybe-install-and-require 'helm)
+     (customize-set-variable 'helm-ff-lynx-style-map t)
      (global-set-key (kbd "C-x C-f") 'helm-find-files)
      (global-set-key (kbd "M-x")     'helm-M-x)
      (helm-mode 1)
@@ -523,7 +531,11 @@
     and automatically expand it into function templates.
 
     #+BEGIN_SRC emacs-lisp
-      (maybe-install-and-require 'yasnippet)
+      (use-package yasnippet
+       :ensure t
+       :defer t
+       :diminish yas-minor-mode
+       :config (yas-global-mode 1))
     #+END_SRC
 
 **** Snippets
@@ -531,7 +543,7 @@
      Let's get the snippets installed
 
      #+BEGIN_SRC emacs-lisp
-       (maybe-install-and-require 'yasnippet-snippets)
+       (setq yas/load-directory (concat user-emacs-directory "snippets"))
      #+END_SRC
 
 **** Turn it on globally
@@ -559,6 +571,7 @@
       (add-hook 'prog-mode-hook
                 '(lambda () (smartscan-mode 1)))
     #+END_SRC
+
 
 ** lisp modes
 
@@ -697,16 +710,8 @@
 **** helm and clojure
 
      #+BEGIN_SRC emacs-lisp
-       (defun helm-clojure-headlines ()
-         "Display headlines for the current Clojure file."
-         (interactive)
-         (helm :sources '(((name . "Clojure Headlines")
-                           (volatile)
-                           (headline "^[;(]")))))
-
-       (add-hook 'clojure-mode-hook
-                 (lambda () (local-set-key (kbd "s-h") 'helm-clojure-headlines)))
-     #+END_SRC
+        (maybe-install-and-require 'helm-cider)
+      #+END_SRC
 
 **** sw1nn-cider-perspective or Engineering
 
@@ -859,8 +864,7 @@
     #+END_SRC
 
 *** Joker
-    Clojure syntax checker \o/ You can download it from here:
-    https://github.com/candid82/flycheck-joker
+    Clojure syntax checker \o/
 
     #+BEGIN_SRC emacs-lisp
      (maybe-install-and-require 'flycheck-joker)
@@ -882,10 +886,10 @@
 
    Disabling it for now - don't like it when there are distractions in my
    Emacs
-   #+BEGIN_SRC emacs-lisp
-     (maybe-install-and-require 'erc)
-     ;;(setq erc-hide-list '("JOIN" "PART" "QUIT"))
-     ;;(setq erc-autojoin-channels-alist
-      ;;    '(("freenode.net" "#clojure")))
-     ;;(erc :server "irc.freenode.net" :port 6667 :nick "annapawlicka")
-   #+END_SRC
+    #+BEGIN_SRC emacs-lisp
+    ;; (maybe-install-and-require 'erc)
+    ;; (setq erc-hide-list '("JOIN" "PART" "QUIT"))
+    ;; (setq erc-autojoin-channels-alist
+    ;;    '(("freenode.net" "#clojure")))
+    ;; (erc :server "irc.freenode.net" :port 6667 :nick "annapawlicka")
+    #+END_SRC
