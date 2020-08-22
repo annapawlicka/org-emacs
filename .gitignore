@@ -16,6 +16,7 @@ projectile-bookmarks.eld
 /var/
 /emms/
 /local/
+/transient/
 tramp
 /org/config.el
 .lein-deps-sum
@@ -24,3 +25,5 @@ tramp
 .lein-failures
 .emacs.desktop
 .emacs.desktop.lock
+network-security.data
+.DS_Store
