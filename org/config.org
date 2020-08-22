@@ -48,6 +48,18 @@
 
    #+BEGIN_SRC emacs-lisp
      (global-set-key (kbd "M-RET") 'hippie-expand)
+     (setq hippie-expand-try-functions-list
+       '(yas-hippie-try-expand
+         try-expand-dabbrev
+         try-expand-dabbrev-all-buffers
+         try-expand-dabbrev-from-kill
+         try-complete-file-name-partially
+         try-complete-file-name
+         try-expand-all-abbrevs
+         try-expand-list
+         try-expand-line
+         try-complete-lisp-symbol-partially
+         try-complete-lisp-symbol))
    #+END_SRC
 
 ** diminish
@@ -570,6 +582,23 @@
      #+BEGIN_SRC emacs-lisp
        (setq yas-snippet-dirs
         '("~/.emacs.d/snippets"))
+     #+END_SRC
+
+     Let's automatically load them when we create new file
+
+     #+BEGIN_SRC emacs-lisp
+       (defun yas--expand-by-uuid (mode uuid)
+          "Exapnd snippet template in MODE by its UUID"
+          (yas-expand-snippet
+            (yas--template-content
+              (yas--get-template-by-uuid mode uuid))))
+
+        ;; Yasnippet templates used in auto-insert mode
+        (use-package autoinsert)
+        (auto-insert-mode)
+        (setq auto-insert-query nil)
+           (define-auto-insert "\.R"
+              '(lambda () (yas--expand-by-uuid 'clojure-mode "ns")))
      #+END_SRC
 
 *** smartscan
