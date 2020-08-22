@@ -895,7 +895,7 @@
     Clojure syntax checker \o/
 
     #+BEGIN_SRC emacs-lisp
-    ;; (use-package flycheck-joker)
+     (use-package flycheck-joker)
     #+END_SRC
 
 *** clj-kondo
@@ -903,6 +903,19 @@
     #+BEGIN_SRC emacs-lisp
      (use-package flycheck-clj-kondo)
     #+END_SRC
+
+*** Use multiple checkers
+
+     #+BEGIN_SRC emacs-lisp
+      (dolist (checker '(clojure-joker clj-kondo-clj clj-kondo-cljs clj-kondo-edn))
+        (setq flycheck-checkers (cons checker (delq checker flycheck-checkers))))
+
+      (dolist (checkers '((clojure-joker . clj-kondo-clj)
+                          (clj-kondo-cljs . clojurescript-joker)
+                          (clj-kondo-cljc . clojure-joker)
+                          (clj-kondo-edn . edn-joker)))
+              (flycheck-add-next-checker (car checkers) (cons 'error (cdr checkers))))
+     #+END_SRC
 
 ** Diffing
    Let's make diffing of cider test output a tiny bit better
