@@ -9,6 +9,9 @@
 (require 'package)
 (setq package-enable-at-startup nil)
 
+(when (equal emacs-version "27.2")
+  (setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3"))
+
 ;; https://emacs.stackexchange.com/a/2989
 (setq package-archives
       '(("elpa"     . "https://elpa.gnu.org/packages/")
@@ -34,7 +37,7 @@
 (setq package-pinned-packages
       '((aggressive-indent . "melpa-stable")
         (bind-key . "melpa")
-        (cider . "melpa-stable")
+        (cider . "melpa")
         (cider-eval-sexp-fu . "melpa-stable")
         (clj-refactor . "melpa-stable")
         (clojure-mode . "melpa-stable")
