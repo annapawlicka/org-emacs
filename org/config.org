@@ -143,27 +143,34 @@
 ** Save Cider history
 
    #+BEGIN_SRC emacs-lisp
-   (setq cider-repl-history-file "~/.emacs.d/cache/cider-history")
+     (setq cider-repl-history-file "~/.emacs.d/cache/cider-history")
    #+END_SRC
 
 ** Remove cider banner
 
    #+BEGIN_SRC emacs-lisp
-   (setq cider-repl-display-help-banner nil)
+     (setq cider-repl-display-help-banner nil)
    #+END_SRC
+
+** Load dev alias when jackin-in
+
+  #+BEGIN_SRC emacs-lisp
+       (setq cider-clojure-cli-global-options "-A:dev")
+   #+END_SRC
+
 
 ** Auto-save in the visited file
 
    #+BEGIN_SRC emacs-lisp
-   (setq auto-save-visited-file-name t)
+     (setq auto-save-visited-file-name t)
    #+END_SRC
 
 ** Delete trailing whitespace
 
    #+BEGIN_SRC emacs-lisp
-   (add-hook 'before-save-hook
-             (lambda nil
-              (delete-trailing-whitespace)))
+     (add-hook 'before-save-hook
+                  (lambda nil
+                   (delete-trailing-whitespace)))
    #+END_SRC
 
 ** Mouse mode in iTerm 2
@@ -587,18 +594,18 @@
      Let's automatically load them when we create new file
 
      #+BEGIN_SRC emacs-lisp
-       (defun yas--expand-by-uuid (mode uuid)
-          "Exapnd snippet template in MODE by its UUID"
-          (yas-expand-snippet
-            (yas--template-content
-              (yas--get-template-by-uuid mode uuid))))
+      ;; (defun yas--expand-by-uuid (mode uuid)
+       ;;   "Exapnd snippet template in MODE by its UUID"
+       ;;   (yas-expand-snippet
+       ;;     (yas--template-content
+      ;;        (yas--get-template-by-uuid mode uuid))))
 
         ;; Yasnippet templates used in auto-insert mode
-        (use-package autoinsert)
-        (auto-insert-mode)
-        (setq auto-insert-query nil)
-           (define-auto-insert "\.R"
-              '(lambda () (yas--expand-by-uuid 'clojure-mode "ns")))
+     ;;   (use-package autoinsert)
+     ;;   (auto-insert-mode)
+     ;;   (setq auto-insert-query nil)
+       ;;    (define-auto-insert "\.R"
+      ;;        '(lambda () (yas--expand-by-uuid 'clojure-mode "ns")))
      #+END_SRC
 
 *** smartscan
