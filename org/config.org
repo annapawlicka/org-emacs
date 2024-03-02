@@ -28,6 +28,16 @@
    (setq exec-path (append exec-path '("/usr/local/bin")))
    #+END_SRC
 
+
+** Temporarily set text quoting style to grave
+
+git-gutter has a bug - "=" in its docstrings is not escaped properly and compiler in
+Emacs 29.x shows a bunch of warnings. This sets the quoting style to the old-style.
+
+   #+BEGIN_SRC emacs-lisp
+     (setq text-quoting-style 'grave)
+   #+END_SRC
+
 ** Company mode
 
    #+BEGIN_SRC emacs-lisp
@@ -392,11 +402,10 @@
 
 *** git-gutter-mode+
 
-    It is really nice having +/= in the gutter. I like it more than
-    having line numbers and thus I've dumped linum-mode.
+    It is really nice having +/= in the gutter.
 
     #+BEGIN_SRC emacs-lisp
-      (use-package git-gutter-fringe)
+      (use-package git-gutter)
       (global-git-gutter-mode t)
     #+END_SRC
 

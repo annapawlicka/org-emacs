@@ -49,6 +49,9 @@
         (flx . "melpa-stable")
         (flx-ido . "melpa-stable")
         (git-commit . "melpa-stable")
+        ;; stable version is broken (doesn't compile in Emacs 29.x that doesn't have linum anymore.
+        ;; there's a fix in the latest pockage in melpa, so let's use that for now.
+        (git-gutter . "melpa")
         (hydra . "melpa-stable")
         (ido . "melpa-stable")
         (ido-completing-read+ . "melpa-stable")
@@ -90,7 +93,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((((class color) (min-colors 89)) (:foreground "#d3d3d3" :background "#000000"))))
  '(helm-buffer-directory ((t (:background "gray8" :foreground "firebrick3"))))
  '(helm-ff-directory ((t (:background "gray17" :foreground "OrangeRed3"))))
  '(helm-selection ((t (:background "purple" :foreground "black" :underline nil)))))
@@ -107,5 +109,4 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   (quote
-    (flycheck-clj-kondo flycheck-color-mode-line flycheck markdown-mode js2-mode helm-cider cider clojure-mode smartscan yasnippet highlight-symbol rainbow-mode rainbow-delimiters paredit projectile buffer-move ace-jump-mode git-gutter-fringe magit helm cyberpunk-theme exec-path-from-shell discover multiple-cursors diminish company use-package))))
+   '(persistent-scratch flycheck-clj-kondo flycheck-color-mode-line flycheck markdown-mode js2-mode helm-cider cider clojure-mode smartscan yasnippet highlight-symbol rainbow-mode rainbow-delimiters paredit projectile buffer-move ace-jump-mode magit helm git-gutter-mode cyberpunk-theme exec-path-from-shell discover multiple-cursors diminish company use-package)))
